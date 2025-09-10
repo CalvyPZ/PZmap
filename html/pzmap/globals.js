@@ -3,6 +3,8 @@ export var g = {
     overlays: {},
     mapui: 0,
     gridui: 0,
+    poisui: 1,
+    poiMarkers: [],
     trimmerui: 0,
     markerui: 0,
     aboutui: 0,

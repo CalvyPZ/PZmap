@@ -6,9 +6,9 @@ var util; // module
 var i18n; // module
 var ui; // module
 var marker; // module
-var Trimmer;
 var svg_draw; // module
 var osd_draw; // module
+var search; // module
 var pmodules = [
     import("./pzmap/globals.js").then((m) => {
         g = m.g;
@@ -23,9 +23,6 @@ var pmodules = [
     }),
     import("./pzmap/marker.js").then((m) => {
         marker = m;
-    }),
-    import("./pzmap/trimmer.js").then((m) => {
-        Trimmer = m.Trimmer;
     }),
     import("./pzmap/i18n.js").then((m) => {
         i18n = m;
@@ -42,6 +39,9 @@ var pmodules = [
     }),
     import("./pzmap/mark/osd_draw.js").then((m) => {
         osd_draw = m;
+    }),
+    import("./pzmap/search.js").then((m) => {
+        search = m;
     })
 ];
 
@@ -50,13 +50,8 @@ window.addEventListener("keydown", (event) => {onKeyDown(event);});
 function initUI() {
     g.UI = ui.createUI();
     util.changeStyle('.iso-only-btn', 'display', g.map_type == 'top' ? 'none' : 'inline-block');
-    if (g.map_type == 'top') {
-        document.getElementById('change_view_btn').innerHTML = 'Switch to Isometric View';
-    } else {
-        document.getElementById('change_view_btn').innerHTML = 'Switch to Top View';
-    }
     updateLayerSelector();
-    for (const type of ['zombie', 'foraging', 'rooms', 'objects', 'streets', 'coords']) {
+    for (const type of ['zombie', 'foraging', 'rooms', 'objects', 'streets']) {
         const uiContainer = document.getElementById(type + '_ui');
         const btn = document.getElementById(type + '_btn');
         if (g.overlays[type]) {
@@ -75,31 +70,34 @@ function initUI() {
             }
         }
     }
-    for (const type of ['marker', 'grid', 'map', 'trimmer', 'about']) {
-        const uiContainer = document.getElementById(type + '_ui');
-        const btn = document.getElementById(type + '_btn');
-        if (g[type + 'ui']) {
-            if (uiContainer) {
-                uiContainer.innerHTML = g.UI[type].html;
-            }
-            if (btn) {
-                if (type == 'map') {
-                    btn.classList.remove('active');
-                } else {
-                    btn.classList.add('active');
-                }
-            }
-        } else {
-            if (uiContainer) {
-                uiContainer.innerHTML = '';
-            }
-            if (btn) {
-                btn.classList.remove('active');
-            }
+    const uiContainer = document.getElementById('grid_ui');
+    const btn = document.getElementById('grid_btn');
+    if (g.gridui) {
+        if (uiContainer) {
+            uiContainer.innerHTML = g.UI.grid.html;
+        }
+        if (btn) {
+            btn.classList.add('active');
+        }
+    } else {
+        if (uiContainer) {
+            uiContainer.innerHTML = '';
+        }
+        if (btn) {
+            btn.classList.remove('active');
         }
     }
-    if (g.mapui) {
-        initModMapUI();
+    
+    // Initialize POI button state
+    const poisBtn = document.getElementById('pois_btn');
+    if (g.poisui) {
+        if (poisBtn) {
+            poisBtn.classList.add('active');
+        }
+    } else {
+        if (poisBtn) {
+            poisBtn.classList.remove('active');
+        }
     }
     if (g.overlays.foraging || g.overlays.objects) {
         document.getElementById('legends').style.display = '';
@@ -107,24 +105,7 @@ function initUI() {
         document.getElementById('legends').style.display = 'none';
     }
 
-    let changeView = false;
-    for (const type of g.base_map.available_types) {
-        if (type != g.base_map.type) {
-            changeView = true;
-        }
-    }
-    if (changeView) {
-        document.getElementById('change_view_btn').style.display = '';
-    } else {
-        document.getElementById('change_view_btn').style.display = 'none';
-    }
-
-
-    updateLangSelector();
-    updateRouteSelector();
-    if (g.aboutui) {
-        updateAbout();
-    }
+    updateViewSwitcher();
 
     util.setOutput('main_output', 'Green', '');
     document.body.style.background = 'black';
@@ -178,11 +159,8 @@ function initOSD() {
             osd_draw.updateZoom();
         }
 
-        if (g.trimmerui) {
-            g.grid.drawEditState(g.trimmer, g.currentLayer);
-        }
 
-        if (g.gridui || g.trimmerui) {
+        if (g.gridui) {
             g.grid.draw(g.currentLayer);
         }
 
@@ -205,62 +183,20 @@ function initOSD() {
     //g.viewer.addHandler('zoom', function(event) {});
 
     g.viewer.addHandler('canvas-press', function(event) {
-        if (g.trimmerui) {
-            if (g.trimmer.press(event)) {
-                event.preventDefaultAction = true;
-            }
-        }
-
-        if (g.markerui) {
-            if (g.marker.edit.press(event)) {
-                event.preventDefaultAction = true;
-            }
-        }
+        // Canvas press event handler
     });
 
     g.viewer.addHandler('canvas-drag', function(event) {
-        if (g.trimmerui) {
-            if (g.trimmer.drag(event)) {
-                forceRedraw();
-                event.preventDefaultAction = true;
-            }
-        }
-        if (g.markerui) {
-            if (g.marker.edit.drag(event)) {
-                forceRedraw();
-                event.preventDefaultAction = true;
-            }
-        }
+        // Canvas drag event handler
     });
 
     g.viewer.addHandler('canvas-release', function(event) {
-        if (g.trimmerui) {
-            if (g.trimmer.release(event)) {
-                forceRedraw();
-                event.preventDefaultAction = true;
-            }
-        }
-        if (g.markerui) {
-            if (g.marker.edit.release(event)) {
-                forceRedraw();
-                event.preventDefaultAction = true;
-            }
-        }
-
+        // Canvas release event handler
     });
 
     g.viewer.addHandler('canvas-click', function(event) {
         if (event.quick) {
-            if (g.trimmerui) {
-                g.trimmer.click(event);
-                forceRedraw();
-                event.preventDefaultAction = true;
-            }
-            if (g.markerui) {
-                if (g.marker.edit.click(event)) {
-                    event.preventDefaultAction = true;
-                }
-            }
+            // Canvas click event handler
         }
     });
 
@@ -288,12 +224,9 @@ function initOSD() {
 
 function init(callback=null) {
     globals.reset();
-    if (g.overlays.coords === undefined) {
-        g.overlays.coords = true; // default on
-    }
     svg_draw.init();
     if (!g.marker) {
-        g.marker = new marker.MarkManager({ indexType: 'rtree', enableEdit: true });
+        g.marker = new marker.MarkManager({ indexType: 'rtree', enableEdit: false });
     } else {
         g.marker.clearRenderCache();
     }
@@ -306,9 +239,6 @@ function init(callback=null) {
         g.debug_marker = new marker.MarkManager({ renderOptions: { renderMethod: 'svg' } });
     } else {
         g.debug_marker.clearRenderCache();
-    }
-    if (!g.trimmer) {
-        g.trimmer = new Trimmer();
     }
     g.base_map = new map.Map(globals.getRoot(), g.map_type, '');
     return g.base_map.init().then(function(b) {
@@ -331,18 +261,351 @@ function init(callback=null) {
                     });
                 });
                 g.viewer.canvas.addEventListener('pointermove', onPointerMove);
+                initCoordinatesUpdater();
                 updateMaps(g.currentLayer);
-                g.marker.redrawAll();
+                
+                // Update the view switcher button after loading
+                updateViewSwitcher();
+                
+                // Load POI markers after map is ready
+                const poiPromise = loadPOIMarkers();
+                
+                // Set up search functionality
+                search.setupSearchEvents(g);
+                
+                // Initialize search container visibility based on POI state
+                const searchContainer = document.getElementById('search-container');
+                if (searchContainer) {
+                    if (g.poisui) {
+                        searchContainer.classList.remove('hidden');
+                    } else {
+                        searchContainer.classList.add('hidden');
+                    }
+                }
+                
+                // Check for URL coordinates and pan/zoom to them
+                checkAndPanFromURL();
+                
                 g.sys_marker.redrawAll();
                 g.debug_marker.redrawAll();
                 if (callback) {
-                    p = Promise.all([p, callback()]);
+                    p = Promise.all([p, poiPromise, callback()]);
+                } else {
+                    p = Promise.all([p, poiPromise]);
                 }
                 p.then(() => { resolve(e); });
             });
         });
     });
 }
+
+/**
+ * Checks for URL coordinates and automatically pans and zooms to that location
+ * URL Format: ?XxY or ?XxYxZ
+ * Where X = pixel X coordinate, Y = pixel Y coordinate, Z = zoom level (0-max, optional, defaults to 7)
+ * Example: ?12800x9600x5 or ?12800x9600
+ */
+function checkAndPanFromURL() {
+    const query = window.location.search.substring(1);
+    
+    if (!query) {
+        return;
+    }
+    
+    const parts = query.split("x").map(Number);
+    
+    if (parts.length < 2 || isNaN(parts[0]) || isNaN(parts[1])) {
+        console.error("Invalid query string format. Expected 'XxYxZ' or 'XxY'.");
+        return;
+    }
+    
+    let pixelX = parts[0];
+    let pixelY = parts[1];
+    const Z = parts.length > 2 && !isNaN(parts[2]) ? parts[2] : 7;
+    
+    if (!g.base_map || typeof g.base_map.cell2pixel !== "function") {
+        console.error("Base map or required methods are not initialized.");
+        return;
+    }
+    
+    // Convert pixel coordinates to grid coordinates (same as old system)
+    const gridX = pixelX / 256;
+    const gridY = pixelY / 256;
+    
+    // Use base map's cell2pixel method to get image coordinates
+    const { x: imageX, y: imageY } = g.base_map.cell2pixel(gridX, gridY);
+    
+    if (!g.base_map.scale) {
+        console.error("Base map scale is not initialized.");
+        return;
+    }
+    
+    // Get the tiled image and convert to viewport coordinates
+    const tiledImage = g.viewer.world.getItemAt(0);
+    if (!tiledImage) {
+        console.error("No tiled image found.");
+        return;
+    }
+    
+    const viewportPoint = tiledImage.imageToViewportCoordinates(imageX, imageY);
+    
+    // Pan to the location
+    g.viewer.viewport.panTo(viewportPoint, true);
+    
+    // Calculate and set zoom level based on Z parameter
+    const maxZoom = g.viewer.viewport.getMaxZoom();
+    const minZoom = g.viewer.viewport.getMinZoom();
+    const layerZoom = minZoom + (Z / g.base_map.layers) * (maxZoom - minZoom);
+    g.viewer.viewport.zoomTo(layerZoom, viewportPoint, true);
+    
+    // Create a marker for the linked coordinates using the new marker system
+    const urlMarker = {
+        id: 'url-coordinate-marker',
+        name: 'Linked Coordinates',
+        desc: 'Coordinate marker based on your link.',
+        x: pixelX,
+        y: pixelY,
+        type: 'point',
+        color: 'red',
+        background: 'rgba(255, 0, 0, 0.3)',
+        text_position: 'none',
+        visible_zoom_level: 0,
+        layer: 0,
+        class_list: ['url-marker']
+    };
+    
+    // Store the URL marker for POI toggle management
+    if (!g.urlMarkers) {
+        g.urlMarkers = [];
+    }
+    g.urlMarkers = [urlMarker]; // Replace any existing URL marker
+    
+    // Add the marker to the main marker system only if POIs are enabled
+    if (g.poisui && g.marker) {
+        g.marker.load([urlMarker]);
+        console.log(`Panned to coordinates: ${pixelX}, ${pixelY} with zoom level: ${Z} and added marker`);
+    } else {
+        console.log(`Panned to coordinates: ${pixelX}, ${pixelY} with zoom level: ${Z}. Enable POIs to see the coordinate marker.`);
+    }
+}
+
+function loadPOIMarkers() {
+    return fetch('./poi.json')
+        .then(response => response.json())
+        .then(pois => {
+            const markers = pois.map(poi => {
+                // Convert POI format to marker format
+                const isAlwaysShow = poi.ID.startsWith('3');
+                if (isAlwaysShow) {
+                    // 3000 series - Text only markers
+                    return {
+                        id: poi.ID,
+                        name: poi.name,
+                        desc: poi.description, // Use desc property as expected by the marker system
+                        x: poi.x,
+                        y: poi.y,
+                        location: poi.location,
+                        tags: poi.tags || [],
+                        type: 'text', // Text type for 3000 series
+                        color: '#FFD700', // Gold color
+                        background: 'transparent',
+                        text_position: 'center',
+                        font: 'bold 18px Arial, sans-serif', // Slightly smaller font
+                        visible_zoom_level: 0, // Always show
+                        layer: 0, // Show on all layers
+                        class_list: ['poi-marker', 'poi-text'] // Add class for hover targeting
+                    };
+                } else {
+                    // Regular POIs - Point markers only (no text)
+                    return {
+                        id: poi.ID,
+                        name: poi.name,
+                        desc: poi.description, // Use desc property as expected by the marker system
+                        x: poi.x,
+                        y: poi.y,
+                        location: poi.location,
+                        tags: poi.tags || [],
+                        type: 'point', // Point type for dot markers
+                        color: 'yellow', // Yellow border
+                        background: 'rgba(255, 243, 17, 0.3)', // Semi-transparent yellow background
+                        text_position: 'none', // Hide text, only show on hover
+                        visible_zoom_level: 1, // Show from further out
+                        layer: 0, // Show on all layers
+                        class_list: ['poi-marker', 'poi-point'] // Add class for hover targeting
+                    };
+                }
+            });
+            
+            // Store POI markers for later toggling
+            g.poiMarkers = markers;
+            
+            // Load markers into the marker system
+            g.marker.load(markers);
+            console.log(`Loaded ${markers.length} POI markers from poi.json`);
+            
+            // Set up POI hover tooltips after a small delay to ensure DOM is ready
+            setTimeout(() => {
+                setupPOIHoverTooltips();
+            }, 100);
+            
+            return Promise.resolve();
+        })
+        .catch(error => {
+            console.error('Failed to load POI markers:', error);
+            return Promise.resolve();
+        });
+}
+
+function setupPOIHoverTooltips() {
+    // Create tooltip element
+    const tooltip = document.createElement('div');
+    tooltip.id = 'poi-tooltip';
+    tooltip.style.cssText = `
+        position: fixed;
+        background: #2e2e2e;
+        color: white;
+        padding: 10px 14px;
+        border-radius: 6px;
+        font-size: 14px;
+        font-family: Arial, sans-serif;
+        z-index: 10000;
+        pointer-events: none;
+        display: none;
+        max-width: 300px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+        border: 1px solid #444;
+        line-height: 1.4;
+    `;
+    document.body.appendChild(tooltip);
+    
+    // Add CSS for POI markers
+    const style = document.createElement('style');
+    style.textContent = `
+        /* Point markers (non-3000 series) - reduced by 25% from previous size */
+        .poi-point {
+            width: 18px !important;
+            height: 18px !important;
+            border-radius: 50% !important;
+            border: 2px solid yellow !important;
+            background-color: rgba(255, 243, 17, 0.3) !important;
+            cursor: pointer !important;
+            pointer-events: auto !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
+        }
+        
+        /* SVG circle markers - reduced by 25% from previous size */
+        .poi-point circle {
+            r: 9 !important;
+            stroke-width: 2px !important;
+            stroke: yellow !important;
+            fill: rgba(255, 243, 17, 0.3) !important;
+        }
+        
+        /* Text markers (3000 series) - reduced by 25% from previous size */
+        .poi-text {
+            background: transparent !important;
+            border: none !important;
+            pointer-events: auto !important;
+            cursor: pointer !important;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+            transform: scale(1.125) !important; /* 1.5 * 0.75 = 1.125 */
+            transform-origin: center !important;
+        }
+        
+        /* Fix for duplicate markers */
+        .poi-marker + .poi-marker[id$="-1"] {
+            display: none !important;
+        }
+    `;
+    document.head.appendChild(style);
+    
+    // Enable pointer events for POI markers and set up hover handlers
+    const observer = new MutationObserver(() => {
+        const poiElements = document.querySelectorAll('.poi-marker');
+        poiElements.forEach(element => {
+            // Enable pointer events for POI markers
+            element.style.pointerEvents = 'auto';
+            element.style.cursor = 'pointer';
+            
+            // Remove default title attribute to prevent browser tooltip
+            element.removeAttribute('title');
+            
+            // Add hover event listeners if not already added
+            if (!element.hasAttribute('data-poi-hover-setup')) {
+                element.setAttribute('data-poi-hover-setup', 'true');
+                
+                element.addEventListener('mouseenter', (e) => {
+                    // Extract marker ID from element ID (format: mark-point-{id}-{index})
+                    const elementId = e.target.id;
+                    const idParts = elementId.split('-');
+                    const markId = idParts.length >= 3 ? idParts[2] : null;
+                    
+                    if (markId) {
+                        const poi = g.marker.db.get(markId);
+                        if (poi) {
+                            const tooltipContent = `
+                                <div style="font-weight: bold; color: white; margin-bottom: 6px; border-bottom: 1px solid #555; padding-bottom: 4px;">${poi.name}</div>
+                                ${poi.desc ? `<div style="color: #bbb; font-size: 12px; line-height: 1.3;">${poi.desc}</div>` : ''}
+                            `;
+                            tooltip.innerHTML = tooltipContent;
+                            tooltip.style.display = 'block';
+                            
+                            // Position tooltip
+                            positionTooltip(e, tooltip);
+                        }
+                    }
+                });
+                
+                element.addEventListener('mouseleave', () => {
+                    tooltip.style.display = 'none';
+                });
+                
+                element.addEventListener('mousemove', (e) => {
+                    if (tooltip.style.display === 'block') {
+                        positionTooltip(e, tooltip);
+                    }
+                });
+            }
+        });
+    });
+    
+    // Start observing for POI marker elements
+    observer.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+        attributeFilter: ['class']
+    });
+    
+    console.log('POI hover tooltips initialized');
+}
+
+function positionTooltip(event, tooltip) {
+    const tooltipRect = tooltip.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    
+    let left = event.clientX + 15;
+    let top = event.clientY - 10;
+    
+    // Adjust horizontal position if tooltip would go off-screen
+    if (left + tooltipRect.width > viewportWidth) {
+        left = event.clientX - tooltipRect.width - 15;
+    }
+    
+    // Adjust vertical position if tooltip would go off-screen
+    if (top + tooltipRect.height > viewportHeight) {
+        top = event.clientY - tooltipRect.height - 15;
+    }
+    
+    // Ensure tooltip doesn't go negative
+    if (left < 5) left = 5;
+    if (top < 5) top = 5;
+    
+    tooltip.style.left = left + 'px';
+    tooltip.style.top = top + 'px';
+}
+
 
 function forceRedraw() {
     g.viewer.forceRedraw();
@@ -383,73 +646,23 @@ function updateLayerSelector() {
 function onLayerSelect() {
     const layer = Number(document.getElementById('layer_selector').value);
     updateMaps(layer);
-    updateCoords(true);
     g.marker.redrawAll();
 }
 
 // roof opacity
 function updateRoofOpacity() {
     const slider = document.getElementById('roof_opacity_slider');
+    const label = document.querySelector('.slider-label');
     g.roof_opacity = slider.value;
     slider.title = i18n.E('RoofOpacity');
+    if (label) {
+        label.textContent = `Roof Layer Opacity: ${slider.value}%`;
+    }
     updateMaps(g.currentLayer);
 }
 
-// mod map ui
-function toggleModMapUI() {
-    if (g.mapui) {
-        g.mapui = 0;
-        document.getElementById('map_ui').innerHTML = '';
-    } else {
-        g.mapui = 1;
-        document.getElementById('map_ui').innerHTML = g.UI.map.html;
-        initModMapUI();
-    }
-}
 
-function initModMapUI() {
-    let p = window.fetch(globals.getRoot() + 'mod_maps/map_list.json');
-    p = p.then((r) => r.json()).catch((e)=>Promise.resolve([]));
-    p = p.then((map_names) => {
-        const s = document.getElementById('map_selector')
-        for (const name of map_names) {
-            const o = document.createElement('option');
-            o.value = name;
-            o.text = name;
-            s.appendChild(o);
-        }
-        updateModMapUI();
-    });
-    return p;
-}
 
-function updateModMapUI() {
-    if (g.mapui) {
-        const btn = document.getElementById('map_all_btn');
-        if (g.mod_maps.length > 0) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-        i18n.update('id', g.UI.map.ids)
-        const mapListContainer = document.getElementById('map_list');
-        mapListContainer.innerHTML = '';
-        const warning = [];
-        for (const mod_map of g.mod_maps) {
-            let state = 'active';
-            if (mod_map.pz_version != g.base_map.pz_version) {
-                state = 'warning';
-                warning.push(mod_map.name)
-            }
-            mapListContainer.innerHTML += `<button class="${state}" style="cursor: not-allowed" ` +
-                `onclick="removeMap('${mod_map.name.replace("'","\\'")}')">${mod_map.name}</button>`;
-        }
-
-        if (warning.length > 0) {
-            util.setOutput('map_output', 'red', '<b>' + i18n.T('MapErrorVersion') + '</b> ' + warning.join(','), 5000);
-        }
-    }
-}
 
 function updateClip() {
     g.base_map.setClipByOtherMaps(g.mod_maps, g.currentLayer);
@@ -468,85 +681,9 @@ function updateMaps(layer) {
     }
 }
 
-function removeMap(name) {
-    let pos = 0;
-    for (pos = 0; pos < g.mod_maps.length; pos++) {
-        if (name == g.mod_maps[pos].name) {
-            break;
-        }
-    }
-    if (pos < g.mod_maps.length) {
-        g.mod_maps[pos].destroy();
-        g.mod_maps.splice(pos, 1);
-        if (g.mod_maps.length == 0) {
-            document.getElementById('map_btn').classList.remove('active');
-        }
-        updateModMapUI();
-        updateClip();
-        updateLayerSelector();
-    }
-}
 
-function addMap(names) {
-    const p = [];
-    for (const name of names) {
-        if (name != '') {
-            let pos = 0;
-            for (pos = 0; pos < g.mod_maps.length; pos++) {
-                if (name === g.mod_maps[pos].name) {
-                    break;
-                }
-            }
-            if (pos >= g.mod_maps.length) {
-                const m = new map.Map(globals.getRoot() + 'mod_maps/' + name + '/', g.map_type, name, g.base_map);
-                g.mod_maps.push(m);
-                p.push(m.init());
-                if (g.mod_maps.length == 1) {
-                    document.getElementById('map_btn').classList.add('active');
-                }
-            }
-        }
-    }
 
-    return Promise.all(p).then(function (maps) {
-        updateModMapUI();
-        updateClip();
-        updateMaps(g.currentLayer);
-        updateLayerSelector();
-    });
-}
 
-function toggleAllMaps() {
-    if (g.mapui) {
-        if (g.mod_maps.length > 0) {
-            for (pos = 0; pos < g.mod_maps.length; pos++) {
-                g.mod_maps[pos].destroy();
-            }
-            g.mod_maps = [];
-            document.getElementById('map_btn').classList.remove('active');
-            updateModMapUI();
-            updateClip();
-            updateLayerSelector();
-        } else {
-            const s = document.getElementById('map_selector');
-            const names = [];
-            for (const o of s.options) {
-                if (o.value) {
-                    names.push(o.value);
-                }
-            }
-            addMap(names);
-        }
-    }
-}
-
-function onMapSelect() {
-    if (g.mapui) {
-        const s = document.getElementById('map_selector');
-        addMap([s.value]);
-        s.value = '';
-    }
-}
 
 // grid
 function toggleGrid() {
@@ -559,6 +696,73 @@ function toggleGrid() {
         g.viewer.raiseEvent('update-viewport', {});
     }
     forceRedraw();
+}
+
+// POIs
+function togglePOIs() {
+    if (g.poisui) {
+        g.poisui = 0;
+        document.getElementById('pois_btn').classList.remove('active');
+        // Hide POI markers by removing them
+        if (g.marker && g.poiMarkers) {
+            for (const poi of g.poiMarkers) {
+                g.marker.remove(poi.id);
+            }
+        }
+        // Hide URL coordinate markers
+        if (g.marker && g.urlMarkers) {
+            for (const urlMarker of g.urlMarkers) {
+                g.marker.remove(urlMarker.id);
+            }
+        }
+        // Hide locked coordinate markers
+        if (g.marker && g.lockedMarkers) {
+            for (const lockedMarker of g.lockedMarkers) {
+                g.marker.remove(lockedMarker.id);
+            }
+        }
+        // Also clear search markers when POIs are hidden
+        search.clearPurpleMarkers(g);
+        
+        // Hide search container when POIs are disabled
+        const searchContainer = document.getElementById('search-container');
+        if (searchContainer) {
+            searchContainer.classList.add('hidden');
+        }
+    } else {
+        g.poisui = 1;
+        document.getElementById('pois_btn').classList.add('active');
+        // Show POI markers by loading them back
+        if (g.marker && g.poiMarkers) {
+            g.marker.load(g.poiMarkers);
+            // Re-setup hover tooltips for POI markers
+            setTimeout(() => {
+                setupPOIHoverTooltips();
+            }, 100);
+        }
+        // Show URL coordinate markers
+        if (g.marker && g.urlMarkers) {
+            g.marker.load(g.urlMarkers);
+            // Set up hover tooltips for URL markers too
+            setTimeout(() => {
+                setupPOIHoverTooltips();
+            }, 100);
+        }
+        // Show locked coordinate markers
+        if (g.marker && g.lockedMarkers) {
+            g.marker.load(g.lockedMarkers);
+            // Set up hover tooltips for locked markers too
+            setTimeout(() => {
+                setupPOIHoverTooltips();
+            }, 100);
+        }
+        
+        // Show search container when POIs are enabled
+        const searchContainer = document.getElementById('search-container');
+        if (searchContainer) {
+            searchContainer.classList.remove('hidden');
+        }
+    }
 }
 
 // overlay maps
@@ -583,292 +787,289 @@ function toggleOverlay(type) {
     } else {
         document.getElementById('legends').style.display = 'none';
     }
-    if (type == 'coords') {
-        updateCoords();
-    }
     updateMaps(g.currentLayer);
 }
 
-// marker
-function toggleMarkerUI() {
-    if (g.markerui) {
-        g.markerui = 0;
-        document.getElementById('marker_btn').classList.remove('active');
-        document.getElementById('marker_ui').innerHTML = '';
-        g.marker.edit.unselect();
-    } else {
-        g.markerui = 1;
-        g.markerui_help = 0;
-        document.getElementById('marker_btn').classList.add('active');
-        document.getElementById('marker_ui').innerHTML = g.UI.marker.html;
-        i18n.update('id', g.UI.marker.ids);
-        if (g.trimmerui) {
-            toggleTrimmer();
-        }
-        g.marker.edit.updateStatus();
-    }
-}
 
-function toggleMarkerHelp() {
-    if (g.markerui) {
-        const help = document.getElementById('marker_help');
-        if (g.markerui_help) {
-            help.innerHTML = '';
-            g.markerui_help = 0;
-        } else {
-            help.innerHTML = g.UI.marker_help.html;
-            g.markerui_help = 1;
-        }
-        i18n.update('id', g.UI.marker_help.ids);
-    }
-    return false;
-}
 
-function onMarkerSave() {
-    g.marker.edit.save();
-}
 
-function onMarkerDelete(event) {
-    if (event && event.ctrlKey) {
-        g.marker.edit.removeSingle();
-    } else {
-        g.marker.edit.remove();
-    }
-}
 
-function onMarkerImport() {
-    g.marker.Import();
-}
 
-function onMarkerExport() {
-    g.marker.Export();
-}
 
-function onMarkerDefault() {
-    g.marker.loadDefault();
-}
-
-function onMarkerClear() {
-    g.marker.removeAll();
-}
-
-function onMarkerFocus() {
-    g.marker.edit.focus();
-}
-
-function onMarkerDeselect() {
-    g.marker.edit.unselect();
-}
-
-function onMarkerInput(e) {
-    g.marker.edit.fromUI();
-}
-
-function togglePointMark(e) {
-    if (e.checked) {
-        g.marker.setVisibleType('Point', true);
-    } else {
-        g.marker.setVisibleType('Point', false);
-    }
-}
-
-function toggleAreaMark(e) {
-    if (e.checked) {
-        g.marker.setVisibleType('Area', true);
-    } else {
-        g.marker.setVisibleType('Area', false);
-    }
-}
-
-function toggleMarkName(e) {
-    if (e.checked) {
-        g.marker.setTextVisibility(true);
-    } else {
-        g.marker.setTextVisibility(false);
-    }
-}
-
-// trimmer ui
-function toggleTrimmer() {
-    if (g.trimmerui) {
-        g.trimmerui = 0;
-        document.getElementById('trimmer_btn').classList.remove('active');
-        document.getElementById('trimmer_ui').innerHTML = '';
-    } else {
-        g.trimmerui = 1;
-        g.trimmerui_help = 0;
-        document.getElementById('trimmer_btn').classList.add('active');
-        document.getElementById('trimmer_ui').innerHTML = g.UI.trimmer.html;
-        i18n.update('id', g.UI.trimmer.ids);
-        if (g.markerui) {
-            toggleMarkerUI();
-        }
-        g.trimmer.listSave();
-    }
-    forceRedraw();
-}
-
-function toggleTrimmerHelp() {
-    if (g.trimmerui) {
-        const help = document.getElementById('trimmer_help');
-        if (g.trimmerui_help) {
-            help.innerHTML = '';
-            g.trimmerui_help = 0;
-        } else {
-            help.innerHTML = g.UI.trimmer_help.html;
-            g.trimmerui_help = 1;
-        }
-        i18n.update('id', g.UI.trimmer_help.ids);
-    }
-    return false;
-}
-
-function onTrimmerRefresh() {
-    if (g.trimmerui) {
-        g.trimmer.listSave().then(() => {
-            forceRedraw();
-        });
-    }
-}
-
-function onTrimmerSaveSelect() {
-    if (g.trimmerui) {
-        g.trimmer.save_path = document.getElementById('trimmer_save_selector').value;
-        g.trimmer.loadSave().then(() => {
-            forceRedraw();
-        });
-    }
-}
-
-function onTrimmerBrowse() {
-    g.trimmer.browse();
-}
-
-function onTrim() {
-    if (g.trimmerui) {
-        g.trimmer.trim().then((update) => {
-            if (update) {
-                forceRedraw();
-            }
-        });
-    }
-}
 
 // coordinates
-function copyCoords() {
-    if (!g.overlays.coords) {
-        return;
-    }
-    const coords = 'x:' + g.sx + ',y:' + g.sy + ',layer:' + g.currentLayer;
-    util.setClipboard(coords).then((err) => {
-        if (err) {
-            util.setOutput('main_output', 'Red', i18n.T('CopyCoordsError', {error: err}));
-        } else {
-            g.sys_marker.load([{
-                    id: 'coords',
-                    type: 'text',
-                    name: i18n.E('Coords') + '<br/><span style="color:yellow">' + i18n.T('CopyCoordsSuccess') + '</span>',
-                    x: g.sx + 1,
-                    y: g.sy + 1,
-                    color: 'lime',
-                    layer: g.currentLayer,
-                    class_list: ['coords'],
-            }]);
-        }
-    });
-}
 
-function updateCoords(recalc=false) {
-    if (recalc && g.position) {
-        [g.sx, g.sy] = c.getSquare(g.position);
-    }
-    if (g.overlays.coords) {
-        g.sys_marker.load([
-            {
-                id: 'cursor',
-                rects: [{
-                    x: g.sx,
-                    y: g.sy,
-                    width: 1,
-                    height: 1
-                }],
-                layer: g.currentLayer,
-                type: 'area',
-                class_list: ['cursor'],
-                visible_zoom_level: 2,
-            },
-            {
-                id: 'coords',
-                type: 'text',
-                name: i18n.E('Coords') + '<br/><span style="color:yellow">' + i18n.T('CoordsHotkey') + '</span>',
-                x: g.sx + 1,
-                y: g.sy + 1,
-                color: 'lime',
-                layer: g.currentLayer,
-                class_list: ['coords'],
-            }
-        ]);
-    } else {
-        g.sys_marker.removeAll();
-    }
-}
 
 function onPointerMove(event) {
     const mouse = OpenSeadragon.getMousePosition(event);
     const offset = OpenSeadragon.getElementOffset(g.viewer.canvas);
     g.position = {position: mouse.minus(offset)};
-    updateCoords(true);
+    if (g.position) {
+        [g.sx, g.sy] = c.getSquare(g.position);
+    }
+    updateCoordinatesSidebar(mouse.minus(offset));
 }
 
-// change route
-function updateRouteSelector() {
-    const s = document.getElementById('route_selector');
-    for (let i = s.options.length - 1; i >= 0; i--) {
-        s.remove(i);
-    }
-
-    s.style.display = 'none';
-    if (g.query_string.map_name !== undefined) {
-        return false;
-    }
-    const route = g.conf.route;
-    if (!route) {
-        return false;
-    }
-
-    const keys = Object.keys(route);
-    if (keys.length <= 0) {
-        return false;
-    }
-    if (keys.length === 1 && keys[0] === g.route) {
-        return false;
-    }
-
-    if (!keys.includes(g.route)) {
-        const o = document.createElement('option');
-        o.id = "route_selector_dummy_option";
-        o.value = 'default';
-        o.text = i18n.T('SelectRoute');
-        o.selected = true;
-        s.appendChild(o);
-    }
-    for (const key of keys) {
-        const o = document.createElement('option');
-        o.value = key;
-        o.text = key;
-        if (g.route === key) {
-            o.selected = true;
+function updateCoordinatesSidebar(position) {
+    const coordsDiv = document.getElementById('mouse-coordinates');
+    if (coordsDiv && g.position) {
+        // Don't update coordinates if they're locked
+        if (!coordinatesLocked) {
+            const [sx, sy] = c.getSquare(g.position);
+            coordsDiv.textContent = `X: ${sx}, Y: ${sy}`;
         }
-        s.appendChild(o);
     }
-    s.style.display = '';
 }
 
-function onChangeRoute() {
-    const route = document.getElementById('route_selector').value;
-    if (route !== g.route) {
-        g.route = route;
-        return reloadView(false);
+function initCoordinatesUpdater() {
+    const coordsDiv = document.getElementById('mouse-coordinates');
+    if (coordsDiv) {
+        coordsDiv.addEventListener('click', function() {
+            if (g.position) {
+                const [sx, sy] = c.getSquare(g.position);
+                const coords = `${sx}x${sy}`;
+                
+                // Try to copy to clipboard
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(coords).then(() => {
+                        const originalText = coordsDiv.textContent;
+                        coordsDiv.textContent = 'Copied successfully!';
+                        setTimeout(() => {
+                            coordsDiv.textContent = originalText;
+                        }, 1000);
+                    }).catch(() => {
+                        // Fallback if clipboard API fails
+                        copyToClipboardFallback(coords, coordsDiv);
+                    });
+                } else {
+                    // Fallback for older browsers
+                    copyToClipboardFallback(coords, coordsDiv);
+                }
+            }
+        });
+    }
+}
+
+function copyToClipboardFallback(text, coordsDiv) {
+    // Create a temporary input element
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999); // For mobile devices
+    
+    try {
+        document.execCommand('copy');
+        const originalText = coordsDiv.textContent;
+        coordsDiv.textContent = 'Copied successfully!';
+        setTimeout(() => {
+            coordsDiv.textContent = originalText;
+        }, 1000);
+    } catch (err) {
+        coordsDiv.textContent = 'Copy failed';
+        setTimeout(() => {
+            coordsDiv.textContent = `Coords: (X: ${g.sx || 0}, Y: ${g.sy || 0})`;
+        }, 1000);
+    }
+    
+    document.body.removeChild(tempInput);
+}
+
+// Coordinate locking functionality
+let coordinatesLocked = false;
+let lockState = "normal"; // "normal", "waiting", "locked"
+let lockedCoordinates = null;
+
+function toggleCoordinatesLock() {
+    const lockButton = document.getElementById('lock_coords_btn');
+    
+    if (lockState === "normal") {
+        // Enter waiting mode
+        lockState = "waiting";
+        lockButton.textContent = "Waiting...";
+        lockButton.disabled = true;
+        
+        // Set up one-time click handler
+        const clickHandler = function(event) {
+            if (event.quick) { // Only handle quick clicks (not drags)
+                handleCoordinateLock(event);
+                // Remove the handler after use
+                g.viewer.removeHandler('canvas-click', clickHandler);
+            }
+        };
+        
+        g.viewer.addHandler('canvas-click', clickHandler);
+        
+    } else if (lockState === "locked") {
+        // Unlock coordinates
+        lockState = "normal";
+        lockButton.textContent = "Lock Coordinates";
+        lockButton.disabled = false;
+        coordinatesLocked = false;
+        lockedCoordinates = null;
+        
+        // Remove the locked coordinate marker
+        if (g.marker && g.lockedMarkers) {
+            for (const marker of g.lockedMarkers) {
+                g.marker.remove(marker.id);
+            }
+            g.lockedMarkers = [];
+        }
+        
+        // Reset coordinates display
+        if (g.position) {
+            const [sx, sy] = c.getSquare(g.position);
+            const coordsDiv = document.getElementById('mouse-coordinates');
+            if (coordsDiv) {
+                coordsDiv.textContent = `X: ${sx}, Y: ${sy}`;
+            }
+        }
+    }
+}
+
+function handleCoordinateLock(event) {
+    // Get click position
+    const pixelPosition = event.position;
+    const canvasPosition = {
+        x: pixelPosition.x * window.devicePixelRatio,
+        y: pixelPosition.y * window.devicePixelRatio
+    };
+    
+    // Convert to square coordinates using the coordinate system
+    const [sx, sy] = c.getSquare({position: pixelPosition});
+    
+    // Create clipboard URL
+    const clipboardUrl = `b42map.com/?${sx}x${sy}`;
+    
+    // Copy to clipboard
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(clipboardUrl).then(() => {
+            showCoordinatesCopiedMessage(sx, sy);
+        }).catch(() => {
+            copyToClipboardFallbackForLock(clipboardUrl, sx, sy);
+        });
+    } else {
+        copyToClipboardFallbackForLock(clipboardUrl, sx, sy);
+    }
+    
+    // Create marker for locked coordinates
+    createLockedCoordinateMarker(sx, sy);
+    
+    // Update lock state
+    lockState = "locked";
+    coordinatesLocked = true;
+    lockedCoordinates = { x: sx, y: sy };
+    
+    const lockButton = document.getElementById('lock_coords_btn');
+    lockButton.textContent = "Unlock Coordinates";
+    lockButton.disabled = false;
+    
+    console.log(`Locked coordinates: ${sx}, ${sy}`);
+}
+
+function createLockedCoordinateMarker(sx, sy) {
+    const lockedMarker = {
+        id: 'locked-coordinate-marker',
+        name: 'Locked Coordinates',
+        desc: `Locked at (X: ${sx}, Y: ${sy})`,
+        x: sx,
+        y: sy,
+        type: 'point',
+        color: 'lime',
+        background: 'rgba(0, 255, 0, 0.4)',
+        text_position: 'none',
+        visible_zoom_level: 0,
+        layer: 0,
+        class_list: ['locked-marker']
+    };
+    
+    // Store the locked marker
+    if (!g.lockedMarkers) {
+        g.lockedMarkers = [];
+    }
+    g.lockedMarkers = [lockedMarker]; // Replace any existing locked marker
+    
+    // Add the marker to the main marker system only if POIs are enabled
+    if (g.poisui && g.marker) {
+        g.marker.load([lockedMarker]);
+    }
+}
+
+function showCoordinatesCopiedMessage(sx, sy) {
+    const coordsDiv = document.getElementById('mouse-coordinates');
+    if (coordsDiv) {
+        const originalText = coordsDiv.textContent;
+        coordsDiv.textContent = 'Coordinates copied to clipboard';
+        
+        setTimeout(() => {
+            if (coordinatesLocked && lockedCoordinates) {
+                coordsDiv.textContent = `Locked: (X: ${lockedCoordinates.x}, Y: ${lockedCoordinates.y})`;
+            } else {
+                coordsDiv.textContent = originalText;
+            }
+        }, 2000);
+    }
+}
+
+function copyToClipboardFallbackForLock(text, sx, sy) {
+    const tempInput = document.createElement('input');
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    tempInput.setSelectionRange(0, 99999);
+    
+    try {
+        document.execCommand('copy');
+        showCoordinatesCopiedMessage(sx, sy);
+    } catch (err) {
+        console.error('Copy failed:', err);
+        const coordsDiv = document.getElementById('mouse-coordinates');
+        if (coordsDiv) {
+            coordsDiv.textContent = 'Copy failed';
+            setTimeout(() => {
+                if (coordinatesLocked && lockedCoordinates) {
+                    coordsDiv.textContent = `Locked: (X: ${lockedCoordinates.x}, Y: ${lockedCoordinates.y})`;
+                } else if (g.position) {
+                    const [sx, sy] = c.getSquare(g.position);
+                    coordsDiv.textContent = `X: ${sx}, Y: ${sy}`;
+                }
+            }, 2000);
+        }
+    }
+    
+    document.body.removeChild(tempInput);
+}
+
+
+// sidebar toggle
+function toggleSidebar() {
+    const sidebarContainer = document.getElementById('sidebar-container');
+    sidebarContainer.classList.toggle('collapsed');
+}
+
+// View switcher functions
+function updateViewSwitcher() {
+    let changeView = false;
+    for (const type of g.base_map.available_types) {
+        if (type != g.base_map.type) {
+            changeView = true;
+        }
+    }
+    
+    const viewBtn = document.getElementById('change_view_btn');
+    const viewLink = document.getElementById('top_view_link');
+    
+    if (changeView) {
+        viewBtn.style.display = '';
+        viewLink.style.display = '';
+        if (g.map_type == 'top') {
+            viewBtn.innerHTML = 'Switch to Isometric View';
+        } else {
+            viewBtn.innerHTML = 'Switch to Top View';
+        }
+    } else {
+        viewBtn.style.display = 'none';
+        viewLink.style.display = 'none';
     }
 }
 
@@ -884,83 +1085,13 @@ function onChangeView() {
 
 function reloadView(keep_mod_map=false) {
     g.viewer.destroy();
-    let setup_maps = null;
-    if (keep_mod_map) {
-        const map_names = [];
-        for (const mod_map of g.mod_maps) {
-            map_names.push(mod_map.name);
-        }
-        setup_maps = function () {
-            addMap(map_names);
-            return Promise.resolve();
-        }
-    }
-    return init(setup_maps);
+    return init();
 }
 
-// language selector
-function updateLangSelector() {
-    const s = document.getElementById('language_selector')
-    for (let i = s.options.length - 1; i >= 0; i--) {
-        s.remove(i);
-    }
 
-    for (const l of i18n.ALL) {
-        const o = document.createElement('option');
-        o.value = l;
-        o.text = l;
-        if (l === i18n.getLang()) {
-            o.selected = true;
-        }
-        s.appendChild(o);
-    }
-}
-
-function onChangeLanguage() {
-    const lang = document.getElementById('language_selector').value;
-    i18n.setLang(lang);
-    i18n.update('id');
-    updateLayerSelector();
-    updateCoords();
-    if (g.aboutui) {
-        updateAbout();
-    }
-    if (g.trimmerui) {
-        util.setOutput('trimmer_output', 'Green', '');
-    }
-    if (g.markerui) {
-        g.marker.edit.updateStatus();
-    }
-    updateMainOutput();
-}
-
-// about
-function toggleAbout() {
-    if (g.aboutui) {
-        g.aboutui = 0;
-        document.getElementById('about_btn').classList.remove('active');
-        document.getElementById('about_ui').innerHTML = '';
-    } else {
-        g.aboutui = 1;
-        document.getElementById('about_btn').classList.add('active');
-        updateAbout();
-    }
-}
-
-function updateAbout() {
-    const [ids, html] = ui.genAboutUI();
-    document.getElementById('about_ui').innerHTML = html;
-    i18n.update('id', ids);
-}
 
 // key listener
 function onKeyDown(event) {
-    if (event.key == 'Escape' && g.markerui) {
-        g.marker.edit.unselect();
-    }
-    if (event.key == 'c') {
-        copyCoords();
-    }
     if (g.query_string.debug && event.key == 't') {
         // debug: display r-tree index
         const nodeList = (rtree, type) => {
@@ -1030,6 +1161,39 @@ function onKeyDown(event) {
         }
     }
 }
+
+// Help popup functions
+function showHelpPopup() {
+    const overlay = document.getElementById('help-popup-overlay');
+    if (overlay) {
+        overlay.style.display = 'flex';
+        // Prevent background scrolling when popup is open
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function hideHelpPopup() {
+    const overlay = document.getElementById('help-popup-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        // Restore background scrolling
+        document.body.style.overflow = 'auto';
+    }
+}
+
+// Make functions globally available for onclick handlers
+window.showHelpPopup = showHelpPopup;
+window.hideHelpPopup = hideHelpPopup;
+
+// Add escape key handler for help popup
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'Escape') {
+        const overlay = document.getElementById('help-popup-overlay');
+        if (overlay && overlay.style.display === 'flex') {
+            hideHelpPopup();
+        }
+    }
+});
 
 Promise.all(pmodules).then(() => {
     init();

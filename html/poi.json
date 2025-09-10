@@ -1,0 +1,7576 @@
+[
+    {
+        "ID": "3000",
+        "name": "Muldraugh",
+        "description": "",
+        "x": 10782,
+        "y": 9950,
+        "Importance": 1,
+        "location": "Muldraugh",
+        "tags": [
+            "town",
+            "city",
+            "spawn"
+        ]
+    },
+    {
+        "ID": "3001",
+        "name": "March ridge",
+        "description": "",
+        "x": 10121,
+        "y": 12720,
+        "Importance": 1,
+        "location": "March ridge",
+        "tags": [
+            "town",
+            "city"
+        ]
+    },
+    {
+        "ID": "3002",
+        "name": "Rosewood",
+        "description": "",
+        "x": 8107,
+        "y": 11576,
+        "Importance": 1,
+        "location": "Rosewood",
+        "tags": [
+            "town",
+            "city",
+            "spawn"
+        ]
+    },
+    {
+        "ID": "3003",
+        "name": "Ekron",
+        "description": "",
+        "x": 545,
+        "y": 9754,
+        "Importance": 1,
+        "location": "Ekron",
+        "tags": [
+            "town",
+            "city"
+        ]
+    },
+    {
+        "ID": "3004",
+        "name": "Irvington",
+        "description": "",
+        "x": 2498,
+        "y": 14253,
+        "Importance": 1,
+        "location": "Irvington",
+        "tags": [
+            "town",
+            "city"
+        ]
+    },
+    {
+        "ID": "3005",
+        "name": "Echo Creek",
+        "description": "",
+        "x": 3518,
+        "y": 10926,
+        "Importance": 1,
+        "location": "Echo Creek",
+        "tags": [
+            "town",
+            "spawn"
+        ]
+    },
+    {
+        "ID": "3006",
+        "name": "Brandenburg",
+        "description": "",
+        "x": 2101,
+        "y": 6076,
+        "Importance": 1,
+        "location": "Brandenburg",
+        "tags": [
+            "town",
+            "city"
+        ]
+    },
+    {
+        "ID": "3007",
+        "name": "Riverside",
+        "description": "",
+        "x": 6443,
+        "y": 5281,
+        "Importance": 1,
+        "location": "Riverside",
+        "tags": [
+            "town",
+            "city",
+            "spawn"
+        ]
+    },
+    {
+        "ID": "3008",
+        "name": "West Point",
+        "description": "",
+        "x": 11697,
+        "y": 6834,
+        "Importance": 1,
+        "location": "West Point",
+        "tags": [
+            "town",
+            "city",
+            "spawn"
+        ]
+    },
+    {
+        "ID": "3009",
+        "name": "Louisville",
+        "description": "",
+        "x": 12936,
+        "y": 2238,
+        "Importance": 1,
+        "location": "Louisville",
+        "tags": [
+            "city"
+        ]
+    },
+    {
+        "ID": "3010",
+        "name": "Louisville airport",
+        "description": "",
+        "x": 15436,
+        "y": 2940,
+        "Importance": 1,
+        "location": "Louisville airport",
+        "tags": []
+    },
+    {
+        "ID": "3011",
+        "name": "Fallas Lake",
+        "description": "",
+        "x": 7276,
+        "y": 8345,
+        "Importance": 1,
+        "location": "Fallas Lake",
+        "tags": [
+            "town"
+        ]
+    },
+    {
+        "ID": "3012",
+        "name": "Valley Station",
+        "description": "",
+        "x": 13515,
+        "y": 5082,
+        "Importance": 1,
+        "location": "Valley Station",
+        "tags": [
+            "region"
+        ]
+    },
+    {
+        "ID": "1000",
+        "name": "Clothing Store",
+        "description": "Barg-n-Clothes.",
+        "x": 11599,
+        "y": 8252,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1001",
+        "name": "Diner",
+        "description": "",
+        "x": 11464,
+        "y": 8809,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1002",
+        "name": "Gas Station",
+        "description": "Gas-2-Go, 2 pumps.",
+        "x": 11603,
+        "y": 8308,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1003",
+        "name": "Gas station",
+        "description": "Two pumps.",
+        "x": 11508,
+        "y": 8832,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1004",
+        "name": "Laundromat",
+        "description": "",
+        "x": 11683,
+        "y": 8821,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1005",
+        "name": "Molan's Used Cars",
+        "description": "Clean them just to be sure.",
+        "x": 11687,
+        "y": 8367,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1006",
+        "name": "Picnic Dining Area",
+        "description": "",
+        "x": 11556,
+        "y": 8858,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1007",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 11668,
+        "y": 8302,
+        "location": "Dixie",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1008",
+        "name": "Supermarket",
+        "description": "",
+        "x": 11670,
+        "y": 8794,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1009",
+        "name": "Trailer Park",
+        "description": "",
+        "x": 11493,
+        "y": 8914,
+        "location": "Dixie",
+        "tags": []
+    },
+    {
+        "ID": "1010",
+        "name": "<3 Brian",
+        "description": "Just a message in the dirt.",
+        "x": 8927,
+        "y": 10320,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1011",
+        "name": "Abandoned Factory",
+        "description": "3 stories, needs renovation.",
+        "x": 3847,
+        "y": 6212,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1012",
+        "name": "Army Quarters",
+        "description": "",
+        "x": 7445,
+        "y": 7959,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1013",
+        "name": "Auto Repair Store",
+        "description": "",
+        "x": 5470,
+        "y": 9661,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1014",
+        "name": "Cabin in the Woods",
+        "description": "",
+        "x": 8059,
+        "y": 7620,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1015",
+        "name": "Camp Busy Beaver",
+        "description": "A collection of cabins & sports amenities deep in the Kentucky wilderness. Happy trails!",
+        "x": 4817,
+        "y": 7939,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1016",
+        "name": "Camping Store",
+        "description": "",
+        "x": 3800,
+        "y": 8549,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1017",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 5501,
+        "y": 9566,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1018",
+        "name": "Construction Site",
+        "description": "",
+        "x": 10223,
+        "y": 7586,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1019",
+        "name": "Deerhead Lake Park Ranger Station",
+        "description": "Park ranger station that has 3 beds, a kitchen upstairs, and lots of storage space.",
+        "x": 4674,
+        "y": 8597,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1020",
+        "name": "Deerhead Lake Park Ranger Station",
+        "description": "Park ranger station that has 3 beds, a kitchen upstairs, and lots of storage space.",
+        "x": 4674,
+        "y": 8597,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1021",
+        "name": "Diner",
+        "description": "",
+        "x": 3703,
+        "y": 8462,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1022",
+        "name": "Doctor's Office",
+        "description": "",
+        "x": 5499,
+        "y": 9582,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1023",
+        "name": "Double Small Warehouses",
+        "description": "",
+        "x": 6560,
+        "y": 8946,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1024",
+        "name": "Double Small Warehouses",
+        "description": "",
+        "x": 5892,
+        "y": 9861,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1025",
+        "name": "Double Warehouse",
+        "description": "",
+        "x": 7657,
+        "y": 9343,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1026",
+        "name": "Double Warehouse",
+        "description": "",
+        "x": 8279,
+        "y": 10039,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1027",
+        "name": "Farm Produce Shop",
+        "description": "With adjoining caf\u00c3\u00a9s.",
+        "x": 5465,
+        "y": 9584,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1028",
+        "name": "Farm stall",
+        "description": "Fresh seasonal produce - sale now on!",
+        "x": 9449,
+        "y": 9777,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1029",
+        "name": "First house shown in Project Zomboid's trailer",
+        "description": "\"What happened here, what's happening here... it's not contained!\"",
+        "x": 7087,
+        "y": 8370,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1030",
+        "name": "Gas Station",
+        "description": "Two Pumps.",
+        "x": 5467,
+        "y": 9709,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1031",
+        "name": "Gas Station",
+        "description": "Gas N More, 2 pumps.",
+        "x": 3690,
+        "y": 8495,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1032",
+        "name": "Gun Store",
+        "description": "No sledgehammer needed.",
+        "x": 3807,
+        "y": 8513,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1033",
+        "name": "Horse Course",
+        "description": "",
+        "x": 5577,
+        "y": 6499,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1034",
+        "name": "Hunter's Cabin",
+        "description": "Has a fireplace, tool shed, and outhouse.",
+        "x": 9040,
+        "y": 8732,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1035",
+        "name": "Ice Cream Store",
+        "description": "You deserve a treat.",
+        "x": 7140,
+        "y": 8981,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1036",
+        "name": "Isolated House",
+        "description": "Low fence and small shed, better than nothing. Mostly obscured by trees.",
+        "x": 3859,
+        "y": 8428,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1037",
+        "name": "Lake House",
+        "description": "A lone house by a lake deep in the woods of Doe Valley. Has an antique oven.",
+        "x": 4243,
+        "y": 7226,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1038",
+        "name": "Laundromat",
+        "description": "Very Small laundromat, only has a handful of washers/dryers.",
+        "x": 7259,
+        "y": 8498,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1039",
+        "name": "Laundromat",
+        "description": "",
+        "x": 5474,
+        "y": 9680,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1041",
+        "name": "Military Research Facility",
+        "description": "",
+        "x": 5564,
+        "y": 12476,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1042",
+        "name": "Military Surplus Store",
+        "description": "",
+        "x": 5464,
+        "y": 9511,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1043",
+        "name": "Restaurant",
+        "description": "",
+        "x": 5547,
+        "y": 9663,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1044",
+        "name": "Small Farm House",
+        "description": "Small Farm House with fields and tool shed.",
+        "x": 3659,
+        "y": 8535,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1045",
+        "name": "Small Warehouse",
+        "description": "",
+        "x": 7485,
+        "y": 11081,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1046",
+        "name": "Small Workshop",
+        "description": "Small workshop with antique oven.",
+        "x": 8532,
+        "y": 9033,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1047",
+        "name": "Trapper House",
+        "description": "The last surviving house of an abandoned town.",
+        "x": 3924,
+        "y": 6214,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1048",
+        "name": "Triple Warehouses",
+        "description": "",
+        "x": 6734,
+        "y": 10020,
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1049",
+        "name": "Bar",
+        "description": "",
+        "x": 7246,
+        "y": 8522,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1050",
+        "name": "Book Store",
+        "description": "",
+        "x": 7258,
+        "y": 8431,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1051",
+        "name": "Burger Joint",
+        "description": "",
+        "x": 7234,
+        "y": 8203,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1052",
+        "name": "Church",
+        "description": "",
+        "x": 7387,
+        "y": 8353,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1053",
+        "name": "Doctor's Office",
+        "description": "",
+        "x": 7296,
+        "y": 8388,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1054",
+        "name": "Farming Supply Store",
+        "description": "Seeds etc, some general hardware, plus guns in the back room.",
+        "x": 7252,
+        "y": 8321,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1055",
+        "name": "Farming Supply Store",
+        "description": "",
+        "x": 7252,
+        "y": 8322,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1056",
+        "name": "Gas Station",
+        "description": "2-story gas station by the lake. 4 pumps.",
+        "x": 7317,
+        "y": 8186,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1057",
+        "name": "General Store",
+        "description": "Lots of food and some clothes.",
+        "x": 7296,
+        "y": 8253,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1058",
+        "name": "Hardware Store",
+        "description": "E.P. Tools.",
+        "x": 7256,
+        "y": 8231,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1059",
+        "name": "Police Station",
+        "description": "",
+        "x": 7252,
+        "y": 8378,
+        "location": "Fallas Lake",
+        "tags": []
+    },
+    {
+        "ID": "1060",
+        "name": "3 Garage Mansion",
+        "description": "",
+        "x": 12037,
+        "y": 2593,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1061",
+        "name": "3 Mansion Complex",
+        "description": "3 Mansions gated all around with only 1 way in and a small pond.",
+        "x": 14149,
+        "y": 2630,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1062",
+        "name": "5 Bux or Less",
+        "description": "Everything under $5, everyday.",
+        "x": 13318,
+        "y": 1293,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1063",
+        "name": "93.2 LMBW Radio",
+        "description": "Electronic equipment & offices.",
+        "x": 12474,
+        "y": 1774,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1064",
+        "name": "A.A. Ron Hunting Supply",
+        "description": "Hunting store/gun store.",
+        "x": 13961,
+        "y": 3231,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1065",
+        "name": "ABCDriving School",
+        "description": "You crash it, you pay it.",
+        "x": 13312,
+        "y": 1314,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1066",
+        "name": "Aitor Wire Company",
+        "description": "",
+        "x": 12183,
+        "y": 1457,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1067",
+        "name": "AmeriGlobe Communications",
+        "description": "",
+        "x": 12305,
+        "y": 3533,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1068",
+        "name": "American Eats",
+        "description": "",
+        "x": 12781,
+        "y": 1214,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1069",
+        "name": "Army Checkpoint",
+        "description": "Army camp set up on the main road.",
+        "x": 12515,
+        "y": 4267,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1070",
+        "name": "Army Surplus Store",
+        "description": "Ready Prep, guns and army gear.",
+        "x": 12224,
+        "y": 1320,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1071",
+        "name": "Art Gallery of Louisville",
+        "description": "",
+        "x": 12547,
+        "y": 1393,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1072",
+        "name": "Auto Repair Shop (Central)",
+        "description": "Car Fix-Ation.",
+        "x": 12655,
+        "y": 2118,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1073",
+        "name": "Auto Repair Shop (Central)",
+        "description": "Al's Autoshop.",
+        "x": 12266,
+        "y": 1567,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1074",
+        "name": "Auto Repair Shop (East)",
+        "description": "American Tire.",
+        "x": 13111,
+        "y": 1757,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1075",
+        "name": "Auto Repair Shop (North)",
+        "description": "Jim's Autoshop.",
+        "x": 12232,
+        "y": 1375,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1076",
+        "name": "Auto Repair Shop (South)",
+        "description": "American Tire.",
+        "x": 13280,
+        "y": 2965,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1077",
+        "name": "Auto Repair Shop (South)",
+        "description": "Car Fix-ation.",
+        "x": 12616,
+        "y": 3518,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1078",
+        "name": "Awl Work and Sew Play",
+        "description": "",
+        "x": 12489,
+        "y": 1697,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1079",
+        "name": "Awl Work and Sew Play",
+        "description": "",
+        "x": 13170,
+        "y": 1560,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1080",
+        "name": "BBBQ",
+        "description": "",
+        "x": 12912,
+        "y": 1398,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1081",
+        "name": "Back To The Nurture",
+        "description": "",
+        "x": 12411,
+        "y": 2835,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1082",
+        "name": "Bakery",
+        "description": "",
+        "x": 13581,
+        "y": 2134,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1083",
+        "name": "Bar",
+        "description": "",
+        "x": 13181,
+        "y": 1283,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1084",
+        "name": "Bar",
+        "description": "",
+        "x": 13951,
+        "y": 3129,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1085",
+        "name": "Bar",
+        "description": "",
+        "x": 12858,
+        "y": 1206,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1086",
+        "name": "Battery Factory",
+        "description": "",
+        "x": 12190,
+        "y": 1270,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1087",
+        "name": "Beer & Liquor",
+        "description": "",
+        "x": 13585,
+        "y": 2147,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1088",
+        "name": "Bible Spirit Baptist Church",
+        "description": "",
+        "x": 12433,
+        "y": 3020,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1089",
+        "name": "Big Empty Warehouse",
+        "description": "Fenced in warehouse with lots of room.",
+        "x": 12704,
+        "y": 2123,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1090",
+        "name": "Big Warehouse",
+        "description": "",
+        "x": 12179,
+        "y": 1592,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1091",
+        "name": "Black Liquorice",
+        "description": "",
+        "x": 13613,
+        "y": 1622,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1092",
+        "name": "Book Store",
+        "description": "Worm of Books.",
+        "x": 13347,
+        "y": 1295,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1093",
+        "name": "Book Store",
+        "description": "Bernards Book Emporium.",
+        "x": 12560,
+        "y": 1931,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1094",
+        "name": "Book Store",
+        "description": "Book Naked.",
+        "x": 12375,
+        "y": 1510,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1095",
+        "name": "Book Store",
+        "description": "",
+        "x": 13240,
+        "y": 1658,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1096",
+        "name": "Book Store",
+        "description": "",
+        "x": 12813,
+        "y": 1310,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1097",
+        "name": "Book Store",
+        "description": "",
+        "x": 13382,
+        "y": 3052,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1098",
+        "name": "Book Store",
+        "description": "",
+        "x": 12534,
+        "y": 1254,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1099",
+        "name": "Book Store",
+        "description": "Quite the collection.",
+        "x": 13524,
+        "y": 1396,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1100",
+        "name": "Book Store",
+        "description": "",
+        "x": 13182,
+        "y": 1250,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1101",
+        "name": "Bow-Wow Dog Nutrition",
+        "description": "",
+        "x": 12561,
+        "y": 3523,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1102",
+        "name": "Bowling Alley",
+        "description": "",
+        "x": 12444,
+        "y": 2062,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1103",
+        "name": "Boxing Gym",
+        "description": "",
+        "x": 13139,
+        "y": 1578,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1104",
+        "name": "Boxing Gym",
+        "description": "",
+        "x": 12313,
+        "y": 1428,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1105",
+        "name": "Boxpop Berwery",
+        "description": "",
+        "x": 13170,
+        "y": 1592,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1106",
+        "name": "Brac Brick Factory",
+        "description": "Full of emergency glass breakers!",
+        "x": 12121,
+        "y": 1259,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1107",
+        "name": "Bridge Checkpoint",
+        "description": "No way through...",
+        "x": 12596,
+        "y": 962,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1108",
+        "name": "Brooks Public Library",
+        "description": "",
+        "x": 12562,
+        "y": 1467,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1109",
+        "name": "Burger Joint",
+        "description": "A small diner on the outskirts of the city center.",
+        "x": 13240,
+        "y": 3486,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1110",
+        "name": "Burgers",
+        "description": "",
+        "x": 13206,
+        "y": 1283,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1111",
+        "name": "Bus Station",
+        "description": "Your gateway to Louisville, Knox Country and beyond! Stains on seats may or may not be brains of the deceased.",
+        "x": 12558,
+        "y": 2313,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1112",
+        "name": "Butcher Shop",
+        "description": "",
+        "x": 12491,
+        "y": 1446,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1113",
+        "name": "Cafe",
+        "description": "",
+        "x": 12713,
+        "y": 1333,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1114",
+        "name": "Cafe",
+        "description": "",
+        "x": 13530,
+        "y": 2143,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1115",
+        "name": "Canto Records",
+        "description": "",
+        "x": 13388,
+        "y": 2925,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1116",
+        "name": "Car Dealership",
+        "description": "Scenic Mile car dealership.",
+        "x": 13246,
+        "y": 1327,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1117",
+        "name": "Car Dealership",
+        "description": "Upscale Mobility Auto Dealership.",
+        "x": 13159,
+        "y": 1388,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1118",
+        "name": "Car Dealership",
+        "description": "",
+        "x": 12372,
+        "y": 2533,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1119",
+        "name": "Cardinal Plaza",
+        "description": "Multi-floor mini-mall with various shops.",
+        "x": 12850,
+        "y": 1316,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1120",
+        "name": "Cathedral",
+        "description": "St. Michael's Cathedral.",
+        "x": 12768,
+        "y": 1398,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1121",
+        "name": "Cemetary",
+        "description": "",
+        "x": 12583,
+        "y": 3274,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1122",
+        "name": "Central Loisville Community Center",
+        "description": "",
+        "x": 12846,
+        "y": 1697,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1123",
+        "name": "Central Park",
+        "description": "Louiville's central park with playground.",
+        "x": 13238,
+        "y": 2681,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1124",
+        "name": "Central Park Stables",
+        "description": "",
+        "x": 13043,
+        "y": 2827,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1125",
+        "name": "Chugg's",
+        "description": "Beverage/beer factory near the Ohio River.",
+        "x": 13330,
+        "y": 1242,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1126",
+        "name": "Church",
+        "description": "Church with a huge graveyard.",
+        "x": 12607,
+        "y": 3364,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1127",
+        "name": "Church",
+        "description": "Holy Light Baptist Church.",
+        "x": 12410,
+        "y": 1926,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1128",
+        "name": "Church",
+        "description": "",
+        "x": 12872,
+        "y": 2856,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1129",
+        "name": "Church",
+        "description": "",
+        "x": 13667,
+        "y": 2547,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1130",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 13182,
+        "y": 1293,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1131",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 13239,
+        "y": 1675,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1132",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 13334,
+        "y": 1293,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1133",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 12693,
+        "y": 1209,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1134",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 12666,
+        "y": 1211,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1135",
+        "name": "Clothing store",
+        "description": "",
+        "x": 13251,
+        "y": 2137,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1136",
+        "name": "Clothing store",
+        "description": "",
+        "x": 13466,
+        "y": 1317,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1137",
+        "name": "Coffee Nirvana",
+        "description": "",
+        "x": 12629,
+        "y": 2327,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1138",
+        "name": "Construction Site",
+        "description": "Good spot for some DIY home improvements.",
+        "x": 13820,
+        "y": 1675,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1139",
+        "name": "Conven-U-Mart",
+        "description": "Food, glorious food.",
+        "x": 12280,
+        "y": 2529,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1140",
+        "name": "Convenience Store / Laundromat",
+        "description": "",
+        "x": 13947,
+        "y": 2240,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1141",
+        "name": "Corn Maze",
+        "description": "Would you go here?",
+        "x": 13721,
+        "y": 3691,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1142",
+        "name": "Corner-fenced house",
+        "description": "A 2-story house on the edge of Louisville that is almost surrounded by tall fences.",
+        "x": 12325,
+        "y": 3415,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1143",
+        "name": "Country Clerk and Records",
+        "description": "",
+        "x": 12637,
+        "y": 1469,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1144",
+        "name": "Court House",
+        "description": "",
+        "x": 12468,
+        "y": 1540,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1145",
+        "name": "Diner",
+        "description": "",
+        "x": 13344,
+        "y": 1735,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1146",
+        "name": "Diner",
+        "description": "What more do I gotta say? Grab a bite to eat in the most zombie-infested place you possibly can.",
+        "x": 13240,
+        "y": 1697,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1147",
+        "name": "Diner",
+        "description": "",
+        "x": 12907,
+        "y": 1408,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1148",
+        "name": "Diner",
+        "description": "",
+        "x": 12718,
+        "y": 1212,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1149",
+        "name": "Discount Account",
+        "description": "",
+        "x": 12627,
+        "y": 3667,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1150",
+        "name": "Dogs-A-Flaming",
+        "description": "",
+        "x": 13078,
+        "y": 1589,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1151",
+        "name": "Donut Store",
+        "description": "",
+        "x": 13470,
+        "y": 1349,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1152",
+        "name": "Dormitory",
+        "description": "",
+        "x": 12328,
+        "y": 2268,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1153",
+        "name": "E. Wrayburn Building",
+        "description": "",
+        "x": 12662,
+        "y": 1400,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1154",
+        "name": "Electrical Substation",
+        "description": "Grid damage detected; Technicians dispatched.",
+        "x": 14765,
+        "y": 4085,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1155",
+        "name": "Elementary School",
+        "description": "",
+        "x": 12335,
+        "y": 3251,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1156",
+        "name": "Evergreen Hill Community Center",
+        "description": "",
+        "x": 13683,
+        "y": 2785,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1157",
+        "name": "Evergreen Hill Community Center",
+        "description": "",
+        "x": 13683,
+        "y": 2785,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1158",
+        "name": "Evergreen Public School",
+        "description": "",
+        "x": 13600,
+        "y": 2762,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1159",
+        "name": "Family Dentistry",
+        "description": "",
+        "x": 13605,
+        "y": 1569,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1160",
+        "name": "Fancy Mansion",
+        "description": "Face the apocalypse like a king.",
+        "x": 13533,
+        "y": 2856,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1161",
+        "name": "Fancy Restaurant",
+        "description": "",
+        "x": 12664,
+        "y": 1151,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1162",
+        "name": "Farm Produce Warehouses",
+        "description": "",
+        "x": 13555,
+        "y": 3635,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1163",
+        "name": "Farmers' Market",
+        "description": "Fresh food from our local farmers! Check out the nearby corn maze!",
+        "x": 13697,
+        "y": 3604,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1164",
+        "name": "Farming Store With Garden",
+        "description": "",
+        "x": 13219,
+        "y": 3021,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1165",
+        "name": "Fenced Housing",
+        "description": "Secure Houses surrounded by tall fences. One entrance.",
+        "x": 13423,
+        "y": 1732,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1166",
+        "name": "Finnegan Research Group",
+        "description": "",
+        "x": 13580,
+        "y": 1701,
+        "location": "Louisville",
+        "tags": ["Office"]
+    },
+    {
+        "ID": "1167",
+        "name": "Fire Department",
+        "description": "",
+        "x": 13689,
+        "y": 1779,
+        "location": "Louisville",
+        "tags": ["Fire", "Fire axe", "Fire station"]
+    },
+    {
+        "ID": "1168",
+        "name": "Fire Department",
+        "description": "",
+        "x": 12363,
+        "y": 1760,
+        "location": "Louisville",
+        "tags": ["Fire", "Fire axe", "Fire station"]
+    },
+    {
+        "ID": "1169",
+        "name": "Fire Department",
+        "description": "",
+        "x": 13943,
+        "y": 3047,
+        "location": "Louisville",
+        "tags": ["Fire", "Fire axe", "Fire station"]
+    },
+    {
+        "ID": "1170",
+        "name": "First Train Inn",
+        "description": "",
+        "x": 12617,
+        "y": 2354,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1171",
+        "name": "Food Market",
+        "description": "",
+        "x": 13346,
+        "y": 1753,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1172",
+        "name": "Food Market",
+        "description": "",
+        "x": 12481,
+        "y": 1929,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1173",
+        "name": "Food Market",
+        "description": "",
+        "x": 13567,
+        "y": 3024,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1174",
+        "name": "Food Market",
+        "description": "",
+        "x": 13782,
+        "y": 2542,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1175",
+        "name": "Food Market",
+        "description": "",
+        "x": 13177,
+        "y": 1603,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1176",
+        "name": "Football Field",
+        "description": "",
+        "x": 12368,
+        "y": 2463,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1177",
+        "name": "Fossoil Field - Baseball stadium",
+        "description": "",
+        "x": 13026,
+        "y": 1581,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1178",
+        "name": "Fossoil Headquarters",
+        "description": "",
+        "x": 12082,
+        "y": 1612,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1179",
+        "name": "From The Dugouts",
+        "description": "Gifts + Souvenirs",
+        "x": 13039,
+        "y": 1634,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1180",
+        "name": "Fun XTreme",
+        "description": "Mini Golf, Bowling, Arcade, Laser Tag.",
+        "x": 12369,
+        "y": 1319,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1181",
+        "name": "Funeral Home",
+        "description": "Here the dead are welcome!",
+        "x": 13153,
+        "y": 1516,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1182",
+        "name": "Furniture Store",
+        "description": "Furniture Store with an antique stove.",
+        "x": 13115,
+        "y": 1444,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1183",
+        "name": "Furniture Store",
+        "description": "Better Furnishings.",
+        "x": 12668,
+        "y": 2163,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1184",
+        "name": "Furniture Store",
+        "description": "",
+        "x": 13420,
+        "y": 1462,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1185",
+        "name": "Furniture Store",
+        "description": "A small furniture store with decent options.",
+        "x": 13380,
+        "y": 3073,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1186",
+        "name": "Garage For Lease",
+        "description": "",
+        "x": 13143,
+        "y": 3013,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1187",
+        "name": "Gas Station",
+        "description": "",
+        "x": 12098,
+        "y": 2100,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1188",
+        "name": "Gas Station",
+        "description": "Gas-2-Go.",
+        "x": 12713,
+        "y": 2239,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1189",
+        "name": "Gas Station",
+        "description": "Fossoil.",
+        "x": 12273,
+        "y": 1621,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1190",
+        "name": "Gas Station",
+        "description": "Fossoil.",
+        "x": 12444,
+        "y": 3536,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1191",
+        "name": "Gas Station",
+        "description": "Gas-2-Go.",
+        "x": 13960,
+        "y": 3275,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1192",
+        "name": "Gas Station",
+        "description": "Fossoil.",
+        "x": 13386,
+        "y": 1412,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1193",
+        "name": "Gas Station",
+        "description": "Fossoil.",
+        "x": 12912,
+        "y": 3029,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1194",
+        "name": "Gas Station",
+        "description": "Gas-2-Go.",
+        "x": 13556,
+        "y": 2138,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1195",
+        "name": "Gas Station",
+        "description": "Gas-2-Go.",
+        "x": 13619,
+        "y": 1527,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1196",
+        "name": "Gas Station",
+        "description": "Gas-2-Go, 4 pumps.",
+        "x": 13383,
+        "y": 2966,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1197",
+        "name": "Gas Station",
+        "description": "Fossoil, 8 pumps.",
+        "x": 12998,
+        "y": 2162,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1198",
+        "name": "Gas Station",
+        "description": "Gas-2-Go, 4-pumps.",
+        "x": 13133,
+        "y": 1324,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1199",
+        "name": "Gas Station/GigaMart",
+        "description": "GigaMart with 4 gas pumps next to it.",
+        "x": 12579,
+        "y": 2550,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1200",
+        "name": "Gated Community",
+        "description": "",
+        "x": 12207,
+        "y": 1799,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1201",
+        "name": "GigaMart",
+        "description": "",
+        "x": 13452,
+        "y": 3057,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1202",
+        "name": "GigaMart",
+        "description": "",
+        "x": 12633,
+        "y": 1672,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1203",
+        "name": "Glo Night Club",
+        "description": "",
+        "x": 12425,
+        "y": 1323,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1204",
+        "name": "Go Flash",
+        "description": "",
+        "x": 12413,
+        "y": 2827,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1205",
+        "name": "Golden Dragon Buffet",
+        "description": "",
+        "x": 12576,
+        "y": 1882,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1206",
+        "name": "Goodman Legal Services",
+        "description": "",
+        "x": 12662,
+        "y": 2190,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1207",
+        "name": "Greene's",
+        "description": "Grocery store.",
+        "x": 13362,
+        "y": 1292,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1208",
+        "name": "Greene's",
+        "description": "Grocery store.",
+        "x": 13334,
+        "y": 2959,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1209",
+        "name": "Greene's",
+        "description": "",
+        "x": 13510,
+        "y": 2142,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1210",
+        "name": "Greene's",
+        "description": "",
+        "x": 13137,
+        "y": 2123,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1211",
+        "name": "Grill store",
+        "description": "",
+        "x": 13328,
+        "y": 3072,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1212",
+        "name": "Grocery Store",
+        "description": "",
+        "x": 13246,
+        "y": 1633,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1213",
+        "name": "Gun Store",
+        "description": "",
+        "x": 13594,
+        "y": 1536,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1214",
+        "name": "Gun Store",
+        "description": "",
+        "x": 12361,
+        "y": 1720,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1215",
+        "name": "Gun Store",
+        "description": "Stars and Stripes.",
+        "x": 13555,
+        "y": 1273,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1216",
+        "name": "Gym",
+        "description": "",
+        "x": 12630,
+        "y": 1144,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1217",
+        "name": "Gym",
+        "description": "",
+        "x": 12854,
+        "y": 1373,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1218",
+        "name": "Hair Genesis",
+        "description": "",
+        "x": 13330,
+        "y": 2971,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1219",
+        "name": "Hardware Store",
+        "description": "",
+        "x": 13959,
+        "y": 3106,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1220",
+        "name": "Hardware Store",
+        "description": "",
+        "x": 13172,
+        "y": 1551,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1221",
+        "name": "Hardware Store",
+        "description": "",
+        "x": 13312,
+        "y": 1307,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1222",
+        "name": "Hardware Store",
+        "description": "",
+        "x": 12377,
+        "y": 1382,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1223",
+        "name": "Hardware Store",
+        "description": "E.P. Tools.",
+        "x": 13959,
+        "y": 3099,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1224",
+        "name": "Hardware Store",
+        "description": "",
+        "x": 13528,
+        "y": 3089,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1225",
+        "name": "Hardware Store",
+        "description": "On the second floor of Grand Ohio Mall.",
+        "x": 13521,
+        "y": 1318,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1226",
+        "name": "Hardware store",
+        "description": "",
+        "x": 13369,
+        "y": 3074,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1227",
+        "name": "Hickory Bakery Box",
+        "description": "",
+        "x": 12927,
+        "y": 1485,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1228",
+        "name": "HighSchool",
+        "description": "",
+        "x": 13049,
+        "y": 1710,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1229",
+        "name": "Hole in the Fence",
+        "description": "The alternate way to the army checkpoint.",
+        "x": 12606,
+        "y": 4161,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1230",
+        "name": "Horsetrack",
+        "description": "",
+        "x": 12224,
+        "y": 2757,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1231",
+        "name": "Hospital",
+        "description": "Louisville Central Hospital.",
+        "x": 12940,
+        "y": 2076,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1232",
+        "name": "Hugo Plush",
+        "description": "",
+        "x": 12578,
+        "y": 1816,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1233",
+        "name": "Jay's Chicken",
+        "description": "",
+        "x": 13466,
+        "y": 2979,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1234",
+        "name": "Jay's Chicken",
+        "description": "Fast-food Restaurant.",
+        "x": 13630,
+        "y": 1271,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1235",
+        "name": "Jay's Chicken",
+        "description": "",
+        "x": 12745,
+        "y": 2233,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1236",
+        "name": "Jay's Chicken",
+        "description": "",
+        "x": 13365,
+        "y": 1350,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1237",
+        "name": "Jay's Chicken",
+        "description": "",
+        "x": 12271,
+        "y": 1381,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1238",
+        "name": "Jay's Chicken HQ",
+        "description": "",
+        "x": 12790,
+        "y": 2227,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1239",
+        "name": "Junkyard",
+        "description": "",
+        "x": 13695,
+        "y": 1681,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1240",
+        "name": "KY Transit",
+        "description": "",
+        "x": 12558,
+        "y": 2408,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1241",
+        "name": "Kentucky Herald Newspaper",
+        "description": "Printing factory and writers/editors workplace.",
+        "x": 12615,
+        "y": 3557,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1242",
+        "name": "Kitchen Supply Store",
+        "description": "Appliances, pots, pans, etc.",
+        "x": 12427,
+        "y": 1371,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1243",
+        "name": "Kitten Knives",
+        "description": "Large office building with a production line and storage.",
+        "x": 12171,
+        "y": 1394,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1244",
+        "name": "Knox Bank",
+        "description": "",
+        "x": 12566,
+        "y": 1696,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1245",
+        "name": "Knox Bank",
+        "description": "",
+        "x": 13410,
+        "y": 1353,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1246",
+        "name": "Knox Bank (Classic Building)",
+        "description": "",
+        "x": 12617,
+        "y": 1586,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1247",
+        "name": "Knox Bank (Modern Building)",
+        "description": "",
+        "x": 13603,
+        "y": 3027,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1248",
+        "name": "Knox Distillery",
+        "description": "",
+        "x": 12912,
+        "y": 1380,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1249",
+        "name": "Knox Pack Kitchens",
+        "description": "Kitchen Appliance Store.",
+        "x": 12917,
+        "y": 1446,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1250",
+        "name": "Knox Talk Radio Station",
+        "description": "",
+        "x": 13561,
+        "y": 1581,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1251",
+        "name": "KnoxPack Kitchens",
+        "description": "",
+        "x": 12632,
+        "y": 3769,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1252",
+        "name": "LBMW Station",
+        "description": "",
+        "x": 12340,
+        "y": 2057,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1253",
+        "name": "LSU Campus",
+        "description": "",
+        "x": 12406,
+        "y": 2255,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1254",
+        "name": "LSU Library",
+        "description": "Louisville State University Library.",
+        "x": 12350,
+        "y": 2142,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1255",
+        "name": "Large Apartment Complex",
+        "description": "",
+        "x": 12787,
+        "y": 1848,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1256",
+        "name": "Large Gated Community",
+        "description": "",
+        "x": 14121,
+        "y": 2798,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1257",
+        "name": "Large Grocery Store",
+        "description": "",
+        "x": 12759,
+        "y": 2944,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1258",
+        "name": "Large Warehouse",
+        "description": "Tools and more.",
+        "x": 12720,
+        "y": 2180,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1259",
+        "name": "Leafhill Heights Offices",
+        "description": "",
+        "x": 12254,
+        "y": 3545,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1260",
+        "name": "Line by Line Design",
+        "description": "",
+        "x": 12565,
+        "y": 3761,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1261",
+        "name": "Liquor Store",
+        "description": "Liquorty Split.",
+        "x": 12408,
+        "y": 2845,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1262",
+        "name": "Liquor Store",
+        "description": "",
+        "x": 13440,
+        "y": 1292,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1263",
+        "name": "Liquor Store",
+        "description": "",
+        "x": 12232,
+        "y": 1347,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1264",
+        "name": "Liquor Store",
+        "description": "",
+        "x": 12618,
+        "y": 2292,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1265",
+        "name": "Liquor store",
+        "description": "",
+        "x": 12717,
+        "y": 5059,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1266",
+        "name": "Liquor store",
+        "description": "",
+        "x": 13960,
+        "y": 3205,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1267",
+        "name": "Lola Limon",
+        "description": "",
+        "x": 12831,
+        "y": 1333,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1268",
+        "name": "Lola Limon",
+        "description": "Inside of the mall.",
+        "x": 13522,
+        "y": 1271,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1269",
+        "name": "Louisville Animal Shelter",
+        "description": "",
+        "x": 12263,
+        "y": 1444,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1270",
+        "name": "Louisville Boat Club",
+        "description": "",
+        "x": 12776,
+        "y": 1144,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1271",
+        "name": "Louisville Bruiser",
+        "description": "Baseball Bat Factory.",
+        "x": 13249,
+        "y": 1234,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1272",
+        "name": "Louisville City Hall",
+        "description": "",
+        "x": 12563,
+        "y": 1534,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1273",
+        "name": "Louisville Expo Center",
+        "description": "",
+        "x": 12965,
+        "y": 1309,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1274",
+        "name": "Louisville Music Concert",
+        "description": "",
+        "x": 13759,
+        "y": 1937,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1275",
+        "name": "Mama McFudgington's",
+        "description": "",
+        "x": 13182,
+        "y": 1276,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1276",
+        "name": "Maps Unlimited",
+        "description": "Sells domestic and internation maps and magazines.",
+        "x": 12233,
+        "y": 1627,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1277",
+        "name": "Mashie Signs & Paintings",
+        "description": "",
+        "x": 12606,
+        "y": 3701,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1278",
+        "name": "Mausoleum",
+        "description": "",
+        "x": 12571,
+        "y": 3172,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1279",
+        "name": "Medical Center",
+        "description": "",
+        "x": 12423,
+        "y": 1761,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1280",
+        "name": "Military Homes",
+        "description": "",
+        "x": 12733,
+        "y": 3969,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1281",
+        "name": "Milk 'n' More",
+        "description": "",
+        "x": 12668,
+        "y": 2125,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1282",
+        "name": "Milk 'n' More",
+        "description": "",
+        "x": 13958,
+        "y": 3242,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1283",
+        "name": "Motel",
+        "description": "",
+        "x": 12428,
+        "y": 2774,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1284",
+        "name": "Motel",
+        "description": "A motel with a large outside pool and plenty of rooms.",
+        "x": 13225,
+        "y": 3523,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1285",
+        "name": "Movie theater",
+        "description": "",
+        "x": 12333,
+        "y": 1369,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1286",
+        "name": "Music store",
+        "description": "",
+        "x": 12403,
+        "y": 1389,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1287",
+        "name": "My Sunday Market",
+        "description": "",
+        "x": 12438,
+        "y": 3108,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1288",
+        "name": "News Now Network",
+        "description": "Large building with many shelves, desks, and a few themed filming sets.",
+        "x": 12645,
+        "y": 1918,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1289",
+        "name": "Oak Park Apartments",
+        "description": "",
+        "x": 12155,
+        "y": 2914,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1290",
+        "name": "Office Furniture Store",
+        "description": "Lots of desks here.",
+        "x": 13682,
+        "y": 1572,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1291",
+        "name": "Palette Art Supplies",
+        "description": "For all your base decoration needs!",
+        "x": 13179,
+        "y": 1748,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1292",
+        "name": "Park Center",
+        "description": "Louisville central park center.",
+        "x": 13391,
+        "y": 2368,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1293",
+        "name": "Pawn Shop",
+        "description": "",
+        "x": 12320,
+        "y": 1331,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1294",
+        "name": "Pawn Shop",
+        "description": "",
+        "x": 13123,
+        "y": 2975,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1295",
+        "name": "Pawn Shop",
+        "description": "",
+        "x": 12376,
+        "y": 1470,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1296",
+        "name": "Pawn Shop",
+        "description": "",
+        "x": 12488,
+        "y": 1383,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1297",
+        "name": "Perfick Potato Co.",
+        "description": "",
+        "x": 12268,
+        "y": 1341,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1298",
+        "name": "Pet Health Pawmise",
+        "description": "A Veterinarian's office.",
+        "x": 13217,
+        "y": 3044,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1299",
+        "name": "Pharmacy",
+        "description": "Pharmahug.",
+        "x": 13237,
+        "y": 1286,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1300",
+        "name": "Pharmacy",
+        "description": "Pharmahug.",
+        "x": 13123,
+        "y": 2126,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1301",
+        "name": "Pharmacy",
+        "description": "Med-U-Well Pharmacy and Medical Clinic.",
+        "x": 13232,
+        "y": 2972,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1302",
+        "name": "Pharmacy",
+        "description": "Med-U-Well Pharmacy and Clinic.",
+        "x": 12950,
+        "y": 1482,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1303",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 12440,
+        "y": 3832,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1304",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 13170,
+        "y": 3028,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1305",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 13225,
+        "y": 2104,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1306",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 13652,
+        "y": 1278,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1307",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 13474,
+        "y": 1411,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1308",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 13517,
+        "y": 2112,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1309",
+        "name": "Police Station",
+        "description": "",
+        "x": 13782,
+        "y": 2558,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1310",
+        "name": "Police Station",
+        "description": "",
+        "x": 13220,
+        "y": 3087,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1311",
+        "name": "Police Station & Prison",
+        "description": "",
+        "x": 12444,
+        "y": 1609,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1312",
+        "name": "Police station",
+        "description": "",
+        "x": 12961,
+        "y": 1379,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1313",
+        "name": "Post Office",
+        "description": "",
+        "x": 12624,
+        "y": 2076,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1314",
+        "name": "Refugee Area",
+        "description": "Refugee Area with lots of tents, propane bbqs, and metal drums.",
+        "x": 12514,
+        "y": 4063,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1315",
+        "name": "Refugee Camp",
+        "description": "",
+        "x": 13423,
+        "y": 3738,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1316",
+        "name": "Remote House with a field",
+        "description": "",
+        "x": 14824,
+        "y": 3716,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1317",
+        "name": "Repurposed Building",
+        "description": "A large building repurposed for what appears to be the army, containing many cots, clothing, and weapons, slightly southwest of the theater in the north of the city.",
+        "x": 12421,
+        "y": 1423,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1318",
+        "name": "Research Labs",
+        "description": "Good lord what is happening in there!",
+        "x": 13597,
+        "y": 1699,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1319",
+        "name": "Resturant",
+        "description": "",
+        "x": 13959,
+        "y": 3211,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1320",
+        "name": "Resturant",
+        "description": "",
+        "x": 12731,
+        "y": 1143,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1321",
+        "name": "Roller Skating Rink",
+        "description": "",
+        "x": 12975,
+        "y": 1430,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1322",
+        "name": "Romero Center for the Performing Arts",
+        "description": "",
+        "x": 12527,
+        "y": 1751,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1323",
+        "name": "Ruined Gas Station",
+        "description": "With one surviving pump.",
+        "x": 13639,
+        "y": 4072,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1324",
+        "name": "Scarlet Oak Distillery",
+        "description": "",
+        "x": 12034,
+        "y": 1945,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1325",
+        "name": "Seahorse Coffee",
+        "description": "",
+        "x": 12576,
+        "y": 1635,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1326",
+        "name": "Seahorse Coffee",
+        "description": "",
+        "x": 13523,
+        "y": 1714,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1327",
+        "name": "Seahorse Coffee",
+        "description": "A coffee store inside Fossoil Stadium.",
+        "x": 13078,
+        "y": 1598,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1328",
+        "name": "Shady Oaks Nursing Home",
+        "description": "",
+        "x": 13084,
+        "y": 2023,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1329",
+        "name": "Sheba Jewellers",
+        "description": "Jewelry Store.",
+        "x": 13570,
+        "y": 1274,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1330",
+        "name": "Small Art Gallery",
+        "description": "",
+        "x": 12517,
+        "y": 1445,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1331",
+        "name": "Small Art Gallery",
+        "description": "",
+        "x": 13610,
+        "y": 1366,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1332",
+        "name": "Small Mall",
+        "description": "",
+        "x": 13344,
+        "y": 3045,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1333",
+        "name": "Small Military Checkpoint",
+        "description": "A small checkpoint on the boundary of the exclusion zone.",
+        "x": 13446,
+        "y": 4077,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1334",
+        "name": "South Army Checkpoint",
+        "description": "Another way into Louisville.",
+        "x": 14534,
+        "y": 4025,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1335",
+        "name": "South Louisville Elementary",
+        "description": "",
+        "x": 12971,
+        "y": 3223,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1336",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 12448,
+        "y": 3786,
+        "location": "Louisville",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1337",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 13457,
+        "y": 2927,
+        "location": "Louisville",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1338",
+        "name": "Spiffo's",
+        "description": "Fast-food Restaurant.",
+        "x": 13661,
+        "y": 1321,
+        "location": "Louisville",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1339",
+        "name": "Spiffo's",
+        "description": "A Spiffo's on the West side of Louisville.",
+        "x": 12314,
+        "y": 1930,
+        "location": "Louisville",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1340",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 13303,
+        "y": 1351,
+        "location": "Louisville",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1341",
+        "name": "Spiffo's",
+        "description": "Spiffo's in the baseball stadium.",
+        "x": 13080,
+        "y": 1633,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1342",
+        "name": "Spiffo's HQ",
+        "description": "The Spiffo's headquarters. Praise mega Spiffo.",
+        "x": 12714,
+        "y": 1621,
+        "location": "Louisville",
+        "tags": ["Spiffo", "Restaurant", "Headquaters"]
+    },
+    {
+        "ID": "1343",
+        "name": "Sporting Goods Store",
+        "description": "Baseball bats for days.",
+        "x": 13316,
+        "y": 3052,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1344",
+        "name": "St. Peregrin Hospital",
+        "description": "",
+        "x": 12458,
+        "y": 3702,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1345",
+        "name": "St. Peregrin Hospital",
+        "description": "",
+        "x": 12458,
+        "y": 3702,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1346",
+        "name": "StarEplex - Movie Theater",
+        "description": "",
+        "x": 12471,
+        "y": 1272,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1347",
+        "name": "Steely Revolve",
+        "description": "A metal working company.",
+        "x": 12583,
+        "y": 3637,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1348",
+        "name": "Storage Units",
+        "description": "",
+        "x": 12196,
+        "y": 1684,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1349",
+        "name": "Storage Units",
+        "description": "",
+        "x": 12181,
+        "y": 1328,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1350",
+        "name": "Storage Units",
+        "description": "",
+        "x": 12713,
+        "y": 1999,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1351",
+        "name": "Storage Units",
+        "description": "",
+        "x": 13122,
+        "y": 1708,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1352",
+        "name": "SweetPea",
+        "description": "",
+        "x": 12419,
+        "y": 2818,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1353",
+        "name": "T.I.S Construction",
+        "description": "",
+        "x": 12669,
+        "y": 2140,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1354",
+        "name": "Taco del Pancho",
+        "description": "",
+        "x": 12579,
+        "y": 2071,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1355",
+        "name": "Taco del Pancho",
+        "description": "",
+        "x": 13527,
+        "y": 3019,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1356",
+        "name": "The Grand Ohio Mall",
+        "description": "Large 2 level mall.",
+        "x": 13562,
+        "y": 1386,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1357",
+        "name": "The Havisham Hotel&Suites",
+        "description": "",
+        "x": 12636,
+        "y": 1317,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1358",
+        "name": "The Plump Cornucopia",
+        "description": "A grocery store of sorts.",
+        "x": 12733,
+        "y": 1211,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1359",
+        "name": "The Waterfront",
+        "description": "",
+        "x": 13037,
+        "y": 1210,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1360",
+        "name": "Thumbs of Green",
+        "description": "Farming store with a garden.",
+        "x": 13135,
+        "y": 1780,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1361",
+        "name": "Time 4 Sport",
+        "description": "On the 1st floor of the mall",
+        "x": 13522,
+        "y": 1314,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1362",
+        "name": "Tita Maria's Catina",
+        "description": "",
+        "x": 13311,
+        "y": 2970,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1363",
+        "name": "Train Station",
+        "description": "",
+        "x": 12714,
+        "y": 2326,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1364",
+        "name": "Train Yard",
+        "description": "",
+        "x": 12675,
+        "y": 4403,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1365",
+        "name": "Train Yard",
+        "description": "",
+        "x": 12650,
+        "y": 4339,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1366",
+        "name": "U-Store It",
+        "description": "",
+        "x": 13689,
+        "y": 1615,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1367",
+        "name": "U.S Mail Service",
+        "description": "Post Office.",
+        "x": 12583,
+        "y": 3581,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1368",
+        "name": "United Shipping Logistics",
+        "description": "",
+        "x": 12627,
+        "y": 3704,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1369",
+        "name": "VHS Store",
+        "description": "Hit Vids.",
+        "x": 12431,
+        "y": 2818,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1370",
+        "name": "VHS Store",
+        "description": "Hit Vids.",
+        "x": 12797,
+        "y": 1212,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1371",
+        "name": "VHS Store",
+        "description": "Hit Vids, West of the Grand Ohio Mall.",
+        "x": 13429,
+        "y": 1292,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1372",
+        "name": "VHS Store",
+        "description": "Hit Vids.",
+        "x": 13114,
+        "y": 1454,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1373",
+        "name": "Valu Insurance",
+        "description": "",
+        "x": 12561,
+        "y": 3617,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1374",
+        "name": "ValuTech HQ",
+        "description": "",
+        "x": 12560,
+        "y": 3696,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1375",
+        "name": "Velvet Tassel Club",
+        "description": "",
+        "x": 12316,
+        "y": 1271,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1376",
+        "name": "Warehouse",
+        "description": "",
+        "x": 12611,
+        "y": 3617,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1377",
+        "name": "Warehouse",
+        "description": "",
+        "x": 12796,
+        "y": 2184,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1378",
+        "name": "Wellington Heights Golf Club",
+        "description": "",
+        "x": 12973,
+        "y": 2233,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1379",
+        "name": "Window shop",
+        "description": "",
+        "x": 13416,
+        "y": 1292,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1380",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 12225,
+        "y": 3026,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1381",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 13000,
+        "y": 3115,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1382",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 13066,
+        "y": 1922,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1383",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 12664,
+        "y": 1366,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1384",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 13519,
+        "y": 1668,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1385",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 12521,
+        "y": 1482,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1386",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 12646,
+        "y": 2291,
+        "location": "Louisville",
+        "tags": []
+    },
+    {
+        "ID": "1387",
+        "name": "Bakery",
+        "description": "",
+        "x": 10081,
+        "y": 12806,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1388",
+        "name": "Bar",
+        "description": "",
+        "x": 10170,
+        "y": 12673,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1389",
+        "name": "Church",
+        "description": "",
+        "x": 10328,
+        "y": 12794,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1390",
+        "name": "Cinema",
+        "description": "",
+        "x": 10172,
+        "y": 12645,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1391",
+        "name": "Community Center",
+        "description": "",
+        "x": 10030,
+        "y": 12732,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1392",
+        "name": "Diner",
+        "description": "",
+        "x": 10110,
+        "y": 11151,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1393",
+        "name": "Doctor's Office",
+        "description": "",
+        "x": 10160,
+        "y": 12761,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1394",
+        "name": "Family Fashion",
+        "description": "",
+        "x": 10079,
+        "y": 12818,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1395",
+        "name": "Farmer's Warehouse",
+        "description": "Logistics hub for fresh produce.",
+        "x": 9395,
+        "y": 9300,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1396",
+        "name": "Food Market",
+        "description": "",
+        "x": 10113,
+        "y": 12786,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1397",
+        "name": "Gas Station",
+        "description": "",
+        "x": 10144,
+        "y": 12791,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1398",
+        "name": "Hair-Saloon",
+        "description": "",
+        "x": 10183,
+        "y": 12819,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1399",
+        "name": "Insurance Office",
+        "description": "",
+        "x": 10074,
+        "y": 12776,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1400",
+        "name": "Knox Military Apartments",
+        "description": "An apartment complex for military personnel with a large amount of equipment and weapons.",
+        "x": 10077,
+        "y": 12637,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1401",
+        "name": "Laundromat",
+        "description": "",
+        "x": 10183,
+        "y": 12782,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1402",
+        "name": "Laundromat",
+        "description": "",
+        "x": 10181,
+        "y": 12731,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1403",
+        "name": "Mama McFudgington's",
+        "description": "",
+        "x": 10176,
+        "y": 12805,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1404",
+        "name": "Mendy's Eatery",
+        "description": "",
+        "x": 10131,
+        "y": 12761,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1405",
+        "name": "Office",
+        "description": "",
+        "x": 10184,
+        "y": 12793,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1406",
+        "name": "Pharmahug",
+        "description": "",
+        "x": 10144,
+        "y": 12761,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1407",
+        "name": "Post Office",
+        "description": "",
+        "x": 10107,
+        "y": 12713,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1408",
+        "name": "Relay station",
+        "description": "A radio relay station. Access forbidden, except trained personnel.",
+        "x": 10278,
+        "y": 8749,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1409",
+        "name": "Restaurant",
+        "description": "",
+        "x": 10095,
+        "y": 12750,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1410",
+        "name": "School",
+        "description": "",
+        "x": 9999,
+        "y": 12655,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1411",
+        "name": "VHS Store",
+        "description": "",
+        "x": 10164,
+        "y": 12733,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1412",
+        "name": "Well",
+        "description": "Well. Well.",
+        "x": 8847,
+        "y": 9206,
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1413",
+        "name": "A CDDA Starter House",
+        "description": "House one starts in the the A Really CDDA challenge map.",
+        "x": 10820,
+        "y": 9412,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1414",
+        "name": "Abandoned Cabins",
+        "description": "",
+        "x": 10969,
+        "y": 9173,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1415",
+        "name": "Abandoned Restaurant",
+        "description": "",
+        "x": 10625,
+        "y": 10047,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1416",
+        "name": "Adult Education Center",
+        "description": "",
+        "x": 10638,
+        "y": 9904,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1417",
+        "name": "All You Can Eat Buffet",
+        "description": "",
+        "x": 10619,
+        "y": 9437,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1418",
+        "name": "Auto Repair Shop",
+        "description": "",
+        "x": 10605,
+        "y": 9406,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1419",
+        "name": "Auto Repair Shop",
+        "description": "",
+        "x": 10173,
+        "y": 10940,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1420",
+        "name": "Backyard Garden",
+        "description": "",
+        "x": 10771,
+        "y": 9539,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1421",
+        "name": "Bakery",
+        "description": "",
+        "x": 10617,
+        "y": 9606,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1422",
+        "name": "Bar",
+        "description": "Care for a drink?",
+        "x": 10617,
+        "y": 9219,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1423",
+        "name": "Baseball Field",
+        "description": "",
+        "x": 10955,
+        "y": 9944,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1424",
+        "name": "Big Urban Warehouse",
+        "description": "",
+        "x": 10694,
+        "y": 10103,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1425",
+        "name": "Bob and Kate's Safehouse",
+        "description": "The pillow will help her get comfortable.",
+        "x": 10746,
+        "y": 9415,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1426",
+        "name": "Book Store",
+        "description": "",
+        "x": 10610,
+        "y": 10365,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1427",
+        "name": "Burger and Laundromat",
+        "description": "",
+        "x": 10606,
+        "y": 9467,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1428",
+        "name": "Cabin",
+        "description": "Do you really want to be alone in the woods now? Without a well?",
+        "x": 11243,
+        "y": 8953,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1429",
+        "name": "Cabin in the Woods",
+        "description": "Do you really want to be alone in the woods now?Has a well.",
+        "x": 9664,
+        "y": 8773,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1430",
+        "name": "Cafeteria",
+        "description": "",
+        "x": 10648,
+        "y": 9924,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1431",
+        "name": "Camp Grounds",
+        "description": "A Group of Cabins In The Woods Near Muldraugh.",
+        "x": 12422,
+        "y": 8927,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1432",
+        "name": "Chapel",
+        "description": "",
+        "x": 10723,
+        "y": 9711,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1433",
+        "name": "Church",
+        "description": "",
+        "x": 10773,
+        "y": 10169,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1434",
+        "name": "Clothing Store",
+        "description": "Small used clothing store.",
+        "x": 10628,
+        "y": 9903,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1435",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 10610,
+        "y": 10376,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1436",
+        "name": "Construction Site",
+        "description": "",
+        "x": 10061,
+        "y": 9576,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1437",
+        "name": "Convenience Store",
+        "description": "",
+        "x": 10838,
+        "y": 10029,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1438",
+        "name": "Cortman Medical",
+        "description": "",
+        "x": 10876,
+        "y": 10028,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1439",
+        "name": "Cross roads",
+        "description": "",
+        "x": 10591,
+        "y": 11204,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1440",
+        "name": "Diner",
+        "description": "",
+        "x": 10614,
+        "y": 10559,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1441",
+        "name": "Drug Lab",
+        "description": "",
+        "x": 11600,
+        "y": 9295,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1442",
+        "name": "Electrical Substation",
+        "description": "",
+        "x": 10383,
+        "y": 10090,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1443",
+        "name": "Electronics Store",
+        "description": "",
+        "x": 10614,
+        "y": 9881,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1444",
+        "name": "Elementary school",
+        "description": "All those fire drills finally paid off!",
+        "x": 10619,
+        "y": 9967,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1445",
+        "name": "Empty Warehouse",
+        "description": "",
+        "x": 11825,
+        "y": 9780,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1446",
+        "name": "Farm Plot",
+        "description": "Potential fresh food.",
+        "x": 10706,
+        "y": 9400,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1447",
+        "name": "Farm to the West",
+        "description": "Has a tool shed, chickencoop and well.",
+        "x": 8599,
+        "y": 8824,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1448",
+        "name": "Forest House",
+        "description": "Do you really want to be alone in the woods right now? Without a well?",
+        "x": 11063,
+        "y": 10638,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1449",
+        "name": "Garages",
+        "description": "",
+        "x": 10602,
+        "y": 9360,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1450",
+        "name": "Gas Station",
+        "description": "Fossoil, 4 pumps.",
+        "x": 10624,
+        "y": 9761,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1451",
+        "name": "Gas Station",
+        "description": "Gas-2-Go, 4 pumps.",
+        "x": 10668,
+        "y": 10625,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1452",
+        "name": "Gated Community",
+        "description": "",
+        "x": 10668,
+        "y": 9572,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1453",
+        "name": "Gated Community",
+        "description": "",
+        "x": 10856,
+        "y": 10138,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1454",
+        "name": "Greene's",
+        "description": "Grocery store.",
+        "x": 10609,
+        "y": 10259,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1455",
+        "name": "H. Smith Attorney",
+        "description": "",
+        "x": 10648,
+        "y": 9648,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1456",
+        "name": "House with Antique Stove",
+        "description": "",
+        "x": 10739,
+        "y": 9839,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1457",
+        "name": "Isolated House",
+        "description": "An isolated house with only 1 way in and out, making it popular stronghold among players because its resource efficent and zombie safe(ish) while being close to the main part of the map.",
+        "x": 10945,
+        "y": 9370,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1458",
+        "name": "Jay's Chicken",
+        "description": "",
+        "x": 10617,
+        "y": 9563,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1459",
+        "name": "Knox Bank",
+        "description": "",
+        "x": 10622,
+        "y": 9691,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1460",
+        "name": "Large Warehouse",
+        "description": "",
+        "x": 10611,
+        "y": 9308,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1461",
+        "name": "Laundromat",
+        "description": "",
+        "x": 10914,
+        "y": 9842,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1462",
+        "name": "Liquor Store",
+        "description": "",
+        "x": 10610,
+        "y": 9905,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1463",
+        "name": "Lone forest shack",
+        "description": "Do you really want to be alone in the woods right now? Without a well?",
+        "x": 9341,
+        "y": 10293,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1464",
+        "name": "Lumber Mill",
+        "description": "",
+        "x": 10319,
+        "y": 9595,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1465",
+        "name": "Mini Mall",
+        "description": "",
+        "x": 10606,
+        "y": 10358,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1466",
+        "name": "Motel",
+        "description": "",
+        "x": 10900,
+        "y": 9749,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1467",
+        "name": "North Farm",
+        "description": "",
+        "x": 10815,
+        "y": 9105,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1468",
+        "name": "Offices",
+        "description": "",
+        "x": 10673,
+        "y": 10327,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1469",
+        "name": "Picnic Area",
+        "description": "",
+        "x": 10992,
+        "y": 9645,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1470",
+        "name": "Pile-o-Crepe",
+        "description": "Pancake house.",
+        "x": 10613,
+        "y": 9505,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1471",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 10604,
+        "y": 10111,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1472",
+        "name": "Police Station",
+        "description": "",
+        "x": 10631,
+        "y": 10405,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1473",
+        "name": "Pony Roam-O",
+        "description": "",
+        "x": 8559,
+        "y": 8529,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1474",
+        "name": "Rail Yard",
+        "description": "",
+        "x": 11655,
+        "y": 9985,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1475",
+        "name": "Remote Logging Offices",
+        "description": "Timber!",
+        "x": 9641,
+        "y": 10152,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1476",
+        "name": "Restaurant",
+        "description": "",
+        "x": 10619,
+        "y": 10528,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1477",
+        "name": "Small convenience store",
+        "description": "",
+        "x": 10836,
+        "y": 9530,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1478",
+        "name": "Small warehouse",
+        "description": "",
+        "x": 10712,
+        "y": 10144,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1479",
+        "name": "Soccer Field",
+        "description": "",
+        "x": 10656,
+        "y": 9970,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1480",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 10621,
+        "y": 9650,
+        "location": "Muldraugh",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1481",
+        "name": "Storage Units",
+        "description": "",
+        "x": 10684,
+        "y": 9829,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1482",
+        "name": "Storage Units",
+        "description": "",
+        "x": 10752,
+        "y": 10347,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1483",
+        "name": "Sunstar Hotel",
+        "description": "",
+        "x": 10628,
+        "y": 9815,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1484",
+        "name": "Tattoo 42",
+        "description": "",
+        "x": 10614,
+        "y": 10155,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1485",
+        "name": "Tavern",
+        "description": "",
+        "x": 10758,
+        "y": 10547,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1486",
+        "name": "The McCoy Logging Corp.",
+        "description": "",
+        "x": 10317,
+        "y": 9290,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1487",
+        "name": "Train Station",
+        "description": "",
+        "x": 11096,
+        "y": 9237,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1488",
+        "name": "VHS Store",
+        "description": "",
+        "x": 10610,
+        "y": 10452,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1489",
+        "name": "Warehouse",
+        "description": "",
+        "x": 10627,
+        "y": 9378,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1490",
+        "name": "Warehouses",
+        "description": "",
+        "x": 10713,
+        "y": 10443,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1491",
+        "name": "Warehouses out of town",
+        "description": "",
+        "x": 10050,
+        "y": 10932,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1492",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 10604,
+        "y": 9613,
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1493",
+        "name": "Liquor Store",
+        "description": "",
+        "x": 6189,
+        "y": 5370,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1494",
+        "name": "Auto Repair",
+        "description": "",
+        "x": 5429,
+        "y": 5964,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1495",
+        "name": "Back to the Nurture chiropractic services",
+        "description": "A nice spot to loosen those joints!",
+        "x": 6187,
+        "y": 5359,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1496",
+        "name": "Bait & Tackle",
+        "description": "Right next to a river.",
+        "x": 3631,
+        "y": 5722,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1497",
+        "name": "Bait Shop",
+        "description": "Includes water barrels.",
+        "x": 5918,
+        "y": 5242,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1498",
+        "name": "Bakery",
+        "description": "",
+        "x": 6493,
+        "y": 5267,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1499",
+        "name": "Bank",
+        "description": "",
+        "x": 6504,
+        "y": 5301,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1500",
+        "name": "Bar",
+        "description": "",
+        "x": 5963,
+        "y": 5422,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1501",
+        "name": "Bar",
+        "description": "",
+        "x": 6382,
+        "y": 5208,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1502",
+        "name": "Beef Roundup",
+        "description": "Restaurant.",
+        "x": 3655,
+        "y": 5719,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1503",
+        "name": "Boat Club",
+        "description": "",
+        "x": 6571,
+        "y": 5212,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1504",
+        "name": "Book Store",
+        "description": "Enigmabooks.",
+        "x": 6437,
+        "y": 5269,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1505",
+        "name": "Burgers",
+        "description": "",
+        "x": 5955,
+        "y": 5263,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1506",
+        "name": "Cafe",
+        "description": "",
+        "x": 6176,
+        "y": 6374,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1507",
+        "name": "Camera Store",
+        "description": "",
+        "x": 6188,
+        "y": 5351,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1508",
+        "name": "Car Junkyard",
+        "description": "Junked Cars, high fence, space to build a castle.",
+        "x": 5820,
+        "y": 5412,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1509",
+        "name": "Cementery",
+        "description": "",
+        "x": 5700,
+        "y": 5331,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1510",
+        "name": "Church",
+        "description": "",
+        "x": 6568,
+        "y": 5374,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1511",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 6403,
+        "y": 5268,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1512",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 6506,
+        "y": 5266,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1513",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 6250,
+        "y": 5266,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1514",
+        "name": "Coffee Shop",
+        "description": "",
+        "x": 6400,
+        "y": 5252,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1515",
+        "name": "Convenience store",
+        "description": "",
+        "x": 5970,
+        "y": 5355,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1516",
+        "name": "Country club",
+        "description": "",
+        "x": 5756,
+        "y": 6446,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1517",
+        "name": "Diner",
+        "description": "",
+        "x": 5424,
+        "y": 5914,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1518",
+        "name": "Donut Store",
+        "description": "Donuts!!!",
+        "x": 6491,
+        "y": 5224,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1519",
+        "name": "Factory",
+        "description": "",
+        "x": 5570,
+        "y": 5899,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1520",
+        "name": "Factory Warehouse",
+        "description": "",
+        "x": 5617,
+        "y": 5973,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1521",
+        "name": "Fancy Restaurant",
+        "description": "",
+        "x": 6192,
+        "y": 5340,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1522",
+        "name": "Farm",
+        "description": "Farm with field, two toolsheds.",
+        "x": 6817,
+        "y": 7720,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1523",
+        "name": "Farm",
+        "description": "Has a lot of land, two houses and sheds.",
+        "x": 5693,
+        "y": 5740,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1524",
+        "name": "Farm Store",
+        "description": "",
+        "x": 7253,
+        "y": 8285,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1525",
+        "name": "Fenced off radio station",
+        "description": "A densely hidden station with two tall fences with the outer fences having some holes.",
+        "x": 4849,
+        "y": 6284,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1526",
+        "name": "Food Market",
+        "description": "",
+        "x": 5969,
+        "y": 5392,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1527",
+        "name": "Food Market",
+        "description": "",
+        "x": 6344,
+        "y": 5297,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1528",
+        "name": "Food Mart",
+        "description": "",
+        "x": 6273,
+        "y": 5266,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1529",
+        "name": "Furniture Store",
+        "description": "",
+        "x": 6239,
+        "y": 5265,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1530",
+        "name": "Furniture store",
+        "description": "",
+        "x": 6427,
+        "y": 5300,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1531",
+        "name": "Gas Station",
+        "description": "",
+        "x": 6083,
+        "y": 5309,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1532",
+        "name": "Gas Station",
+        "description": "",
+        "x": 5418,
+        "y": 5870,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1533",
+        "name": "Gas Station",
+        "description": "1 pump chump.",
+        "x": 3661,
+        "y": 5958,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1534",
+        "name": "Gated Community",
+        "description": "",
+        "x": 6715,
+        "y": 5483,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1535",
+        "name": "General Store",
+        "description": "",
+        "x": 3679,
+        "y": 5743,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1536",
+        "name": "GigaMart",
+        "description": "",
+        "x": 6505,
+        "y": 5346,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1537",
+        "name": "Golf Course",
+        "description": "Golf. At a time like this?",
+        "x": 6091,
+        "y": 6392,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1538",
+        "name": "Grocery Store",
+        "description": "",
+        "x": 6140,
+        "y": 5370,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1539",
+        "name": "Hardware Store",
+        "description": "",
+        "x": 6364,
+        "y": 5327,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1540",
+        "name": "Hotel",
+        "description": "",
+        "x": 6357,
+        "y": 5259,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1541",
+        "name": "House with Farmland",
+        "description": "",
+        "x": 6956,
+        "y": 5565,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1542",
+        "name": "Ice Cream Parlor",
+        "description": "",
+        "x": 6471,
+        "y": 5222,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1543",
+        "name": "Jewellery store",
+        "description": "",
+        "x": 6481,
+        "y": 5267,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1544",
+        "name": "Laundromat",
+        "description": "",
+        "x": 6407,
+        "y": 5339,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1545",
+        "name": "Mama Mcfudgingtons",
+        "description": "",
+        "x": 6491,
+        "y": 5266,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1546",
+        "name": "Pharmacy",
+        "description": "",
+        "x": 6471,
+        "y": 5266,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1547",
+        "name": "Police Station",
+        "description": "",
+        "x": 6082,
+        "y": 5261,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1548",
+        "name": "Rec Centre",
+        "description": "",
+        "x": 6560,
+        "y": 5305,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1549",
+        "name": "School",
+        "description": "",
+        "x": 6446,
+        "y": 5444,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1550",
+        "name": "School",
+        "description": "",
+        "x": 6440,
+        "y": 5445,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1551",
+        "name": "Seat Yourself Furniture Store",
+        "description": "",
+        "x": 6236,
+        "y": 5264,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1552",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 6123,
+        "y": 5305,
+        "location": "Riverside",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1553",
+        "name": "Storage Units",
+        "description": "",
+        "x": 5541,
+        "y": 6063,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1554",
+        "name": "Toy Store",
+        "description": "",
+        "x": 6452,
+        "y": 5298,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1555",
+        "name": "Trailer Park",
+        "description": "",
+        "x": 5342,
+        "y": 5980,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1556",
+        "name": "U.S. Mail Service",
+        "description": "There are a lot of books at their storage.",
+        "x": 6312,
+        "y": 5264,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1557",
+        "name": "VHS Store",
+        "description": "",
+        "x": 6206,
+        "y": 5344,
+        "location": "Riverside",
+        "tags": []
+    },
+    {
+        "ID": "1558",
+        "name": "Apartment Complex",
+        "description": "Top floor of this building contains apartments.",
+        "x": 8081,
+        "y": 11535,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1559",
+        "name": "Army Barracks",
+        "description": "",
+        "x": 8136,
+        "y": 10238,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1560",
+        "name": "Army Quarter",
+        "description": "",
+        "x": 9118,
+        "y": 11814,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1561",
+        "name": "Auto Repair Shop",
+        "description": "",
+        "x": 8154,
+        "y": 11325,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1562",
+        "name": "Bail Bonds",
+        "description": "",
+        "x": 7994,
+        "y": 11450,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1563",
+        "name": "Bank",
+        "description": "",
+        "x": 8084,
+        "y": 11588,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1564",
+        "name": "Bar",
+        "description": "",
+        "x": 8019,
+        "y": 11427,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1565",
+        "name": "Book Store",
+        "description": "",
+        "x": 8087,
+        "y": 11512,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1566",
+        "name": "Bus Station",
+        "description": "",
+        "x": 8244,
+        "y": 12239,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1567",
+        "name": "Church",
+        "description": "",
+        "x": 8124,
+        "y": 11550,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1568",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 8087,
+        "y": 11489,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1569",
+        "name": "Construction Site",
+        "description": "",
+        "x": 8219,
+        "y": 11841,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1570",
+        "name": "Diner",
+        "description": "",
+        "x": 8075,
+        "y": 11456,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1571",
+        "name": "Drive-In Movie Theater",
+        "description": "",
+        "x": 8426,
+        "y": 12240,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1572",
+        "name": "Dual Farmhouses",
+        "description": "Two farmhouses with a nearby warehouse & shed combo.",
+        "x": 7671,
+        "y": 11098,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1573",
+        "name": "Elementary School",
+        "description": "",
+        "x": 8341,
+        "y": 11612,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1574",
+        "name": "Farmer's Market",
+        "description": "",
+        "x": 9070,
+        "y": 12200,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1575",
+        "name": "Fire Departament",
+        "description": "\"Daring today, aren't we?\"",
+        "x": 8138,
+        "y": 11741,
+        "location": "Rosewood",
+        "tags": ["Fire", "Fire axe", "Fire station"]
+    },
+    {
+        "ID": "1576",
+        "name": "Food Market and Laundromat",
+        "description": "",
+        "x": 8136,
+        "y": 11485,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1577",
+        "name": "Food Warehouse",
+        "description": "",
+        "x": 7488,
+        "y": 11082,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1578",
+        "name": "Fresh Food Market",
+        "description": "",
+        "x": 9074,
+        "y": 12186,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1579",
+        "name": "Gas Station",
+        "description": "Fossoil, 8 pumps.",
+        "x": 8297,
+        "y": 12225,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1580",
+        "name": "Gas Station",
+        "description": "4 pumps.",
+        "x": 8164,
+        "y": 11267,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1581",
+        "name": "Gated Community",
+        "description": "Defendable housing.",
+        "x": 8026,
+        "y": 11525,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1582",
+        "name": "House",
+        "description": "Single level house with farm plots, a tool shed and a high fence around with one way in.",
+        "x": 8341,
+        "y": 11750,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1583",
+        "name": "Isolated Houses",
+        "description": "Extreme isolation means noise should draw little foot traffic.",
+        "x": 8838,
+        "y": 11612,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1584",
+        "name": "Kentucky State Prison",
+        "description": "Not the best/worst place to live!",
+        "x": 7693,
+        "y": 11873,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1585",
+        "name": "Knox County Court of Justice",
+        "description": "",
+        "x": 8075,
+        "y": 11654,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1586",
+        "name": "Knox County Court of Justice",
+        "description": "",
+        "x": 8075,
+        "y": 11654,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1587",
+        "name": "Law Offices",
+        "description": "",
+        "x": 8089,
+        "y": 11536,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1588",
+        "name": "Mama McFudgington's",
+        "description": "",
+        "x": 8085,
+        "y": 11619,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1589",
+        "name": "Mama McFudgington's",
+        "description": "",
+        "x": 8085,
+        "y": 11619,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1590",
+        "name": "Motel",
+        "description": "",
+        "x": 8078,
+        "y": 11417,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1591",
+        "name": "Packaging Warehouses",
+        "description": "",
+        "x": 9199,
+        "y": 11853,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1592",
+        "name": "Pizza Restaurant",
+        "description": "",
+        "x": 8075,
+        "y": 11310,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1593",
+        "name": "Rosewood Country Buffet",
+        "description": "*Disclaimer: Not all-you-can-eat.",
+        "x": 8086,
+        "y": 11500,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1594",
+        "name": "Rosewood Medical",
+        "description": "",
+        "x": 8089,
+        "y": 11526,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1595",
+        "name": "Salon",
+        "description": "",
+        "x": 8086,
+        "y": 11551,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1596",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 8074,
+        "y": 11343,
+        "location": "Rosewood",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1597",
+        "name": "Warehouse",
+        "description": "",
+        "x": 9202,
+        "y": 11840,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1598",
+        "name": "Warehouse",
+        "description": "Isolated Warehouse With Garage Opening.",
+        "x": 7887,
+        "y": 12467,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1599",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 8089,
+        "y": 11561,
+        "location": "Rosewood",
+        "tags": []
+    },
+    {
+        "ID": "1600",
+        "name": "Bait Shop",
+        "description": "Morris' Bait Shop.",
+        "x": 12538,
+        "y": 5288,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1601",
+        "name": "Bar",
+        "description": "",
+        "x": 13004,
+        "y": 5262,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1602",
+        "name": "Beauty Salon",
+        "description": "",
+        "x": 13619,
+        "y": 5672,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1603",
+        "name": "Big Farm",
+        "description": "",
+        "x": 13856,
+        "y": 4740,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1604",
+        "name": "Book Store",
+        "description": "",
+        "x": 13604,
+        "y": 5668,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1605",
+        "name": "Bridge",
+        "description": "",
+        "x": 12309,
+        "y": 6730,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1606",
+        "name": "Burger Shop",
+        "description": "Now with 100% meat!",
+        "x": 12544,
+        "y": 5266,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1607",
+        "name": "Burned Trailer Park",
+        "description": "A burnt trailer park behind the military checkpoint.",
+        "x": 13887,
+        "y": 4040,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1608",
+        "name": "Bus Station",
+        "description": "",
+        "x": 12733,
+        "y": 5773,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1609",
+        "name": "Camp Ground",
+        "description": "",
+        "x": 13721,
+        "y": 6729,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1610",
+        "name": "Church",
+        "description": "Sacred flame church.",
+        "x": 12848,
+        "y": 4956,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1611",
+        "name": "Church",
+        "description": "Small Church with small tool shed near.",
+        "x": 14551,
+        "y": 4970,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1612",
+        "name": "Clothing Store",
+        "description": "",
+        "x": 13686,
+        "y": 5672,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1613",
+        "name": "Construction Site",
+        "description": "",
+        "x": 14123,
+        "y": 5493,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1614",
+        "name": "Construction Site",
+        "description": "",
+        "x": 12582,
+        "y": 5387,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1615",
+        "name": "Crossroads Mall",
+        "description": "Beware the Shopping Dead.",
+        "x": 13930,
+        "y": 5878,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1616",
+        "name": "Daycare",
+        "description": "",
+        "x": 13585,
+        "y": 5669,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1617",
+        "name": "Daycare",
+        "description": "",
+        "x": 13585,
+        "y": 5669,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1618",
+        "name": "Department Store",
+        "description": "Sammie's",
+        "x": 13418,
+        "y": 1462,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1619",
+        "name": "Destroyed Cabin",
+        "description": "",
+        "x": 12531,
+        "y": 5232,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1620",
+        "name": "Diner",
+        "description": "",
+        "x": 12741,
+        "y": 5711,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1621",
+        "name": "Drag Strip",
+        "description": "",
+        "x": 12840,
+        "y": 6402,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1622",
+        "name": "East Bridge",
+        "description": "Bridge Connecting Valley Station and West Point.",
+        "x": 12895,
+        "y": 6898,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1623",
+        "name": "Elementary School",
+        "description": "",
+        "x": 12857,
+        "y": 4856,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1624",
+        "name": "Food Market",
+        "description": "",
+        "x": 12571,
+        "y": 5728,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1625",
+        "name": "Gas Station",
+        "description": "Ruby gas, 2 pumps.",
+        "x": 12734,
+        "y": 5033,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1626",
+        "name": "Gas Station",
+        "description": "Gas-2-Go, 4 pumps.",
+        "x": 13734,
+        "y": 5643,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1627",
+        "name": "House Near the Lake",
+        "description": "With tool shed and small lake go fishing.",
+        "x": 14059,
+        "y": 5199,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1628",
+        "name": "Hunting Cabin",
+        "description": "",
+        "x": 13651,
+        "y": 7145,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1629",
+        "name": "Hunting Lodge",
+        "description": "",
+        "x": 13105,
+        "y": 5315,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1630",
+        "name": "Hunting Stand",
+        "description": "Watch out for bears.",
+        "x": 13403,
+        "y": 5338,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1631",
+        "name": "Knox Bank",
+        "description": "",
+        "x": 13656,
+        "y": 5745,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1632",
+        "name": "Medium Warehouse",
+        "description": "",
+        "x": 12620,
+        "y": 4713,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1633",
+        "name": "Pile-o-Crepe",
+        "description": "",
+        "x": 13602,
+        "y": 5762,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1634",
+        "name": "Restaurant",
+        "description": "",
+        "x": 13649,
+        "y": 5671,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1635",
+        "name": "Shooting Range",
+        "description": "",
+        "x": 13266,
+        "y": 5442,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1636",
+        "name": "Small Dock",
+        "description": "",
+        "x": 12482,
+        "y": 5298,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1637",
+        "name": "Small Farm",
+        "description": "With big garden, small tool shed and food stand.",
+        "x": 14315,
+        "y": 4953,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1638",
+        "name": "Small Hotel",
+        "description": "",
+        "x": 13008,
+        "y": 5321,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1639",
+        "name": "Small Store",
+        "description": "Groceries.",
+        "x": 12627,
+        "y": 5324,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1640",
+        "name": "StarEplex Cinema",
+        "description": "",
+        "x": 13629,
+        "y": 5881,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1641",
+        "name": "Storage Units",
+        "description": "",
+        "x": 12959,
+        "y": 4876,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1642",
+        "name": "Valu In$urance",
+        "description": "\"Sorry, zombie apocalypses aren't covered under the Act of God clause in your policy.\"",
+        "x": 13664,
+        "y": 5669,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1643",
+        "name": "Yummmers",
+        "description": "Restaurant.",
+        "x": 13571,
+        "y": 5762,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1644",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 13658,
+        "y": 5766,
+        "location": "Valley Station",
+        "tags": []
+    },
+    {
+        "ID": "1645",
+        "name": "Auto Repair Shop",
+        "description": "Car Fix-ation.",
+        "x": 11898,
+        "y": 6807,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1646",
+        "name": "Auto Repair Shop",
+        "description": "American Tire.",
+        "x": 12256,
+        "y": 6931,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1647",
+        "name": "Bakery",
+        "description": "",
+        "x": 11907,
+        "y": 6866,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1648",
+        "name": "Book Store",
+        "description": "Enigma books.",
+        "x": 11896,
+        "y": 6880,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1649",
+        "name": "Burger Restaurant",
+        "description": "",
+        "x": 13965,
+        "y": 4866,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1650",
+        "name": "Burgers",
+        "description": "",
+        "x": 12077,
+        "y": 7075,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1651",
+        "name": "Cabin",
+        "description": "Do you really want to be alone in the woods without a well?",
+        "x": 13628,
+        "y": 7222,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1652",
+        "name": "Cafe",
+        "description": "",
+        "x": 13092,
+        "y": 5449,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1653",
+        "name": "Choo Choo Train Caboose",
+        "description": "No choo choo train :(",
+        "x": 12197,
+        "y": 6878,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1654",
+        "name": "Church",
+        "description": "",
+        "x": 11967,
+        "y": 6990,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1655",
+        "name": "Church and Cemetery",
+        "description": "Does anyone else think it's a bad idea being on a cemetary during the zombie apocalypse?",
+        "x": 11069,
+        "y": 6710,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1656",
+        "name": "Commercial Rent",
+        "description": "",
+        "x": 11666,
+        "y": 7036,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1657",
+        "name": "Construction Site",
+        "description": "",
+        "x": 12062,
+        "y": 6918,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1658",
+        "name": "Crate Shed",
+        "description": "",
+        "x": 10942,
+        "y": 6769,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1659",
+        "name": "Day Care",
+        "description": "",
+        "x": 11740,
+        "y": 6923,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1660",
+        "name": "Dock",
+        "description": "",
+        "x": 11828,
+        "y": 6574,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1661",
+        "name": "Dock",
+        "description": "",
+        "x": 11276,
+        "y": 6594,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1662",
+        "name": "Farmhouse",
+        "description": "",
+        "x": 11132,
+        "y": 6852,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1663",
+        "name": "Farmhouse",
+        "description": "Large farmhouse with toolsheds and chicken coop.",
+        "x": 14396,
+        "y": 4568,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1664",
+        "name": "Farmhouse",
+        "description": "Has an antique stove.",
+        "x": 9279,
+        "y": 7781,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1665",
+        "name": "Food Market",
+        "description": "",
+        "x": 11984,
+        "y": 6911,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1666",
+        "name": "Food Market",
+        "description": "",
+        "x": 13937,
+        "y": 4864,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1667",
+        "name": "Furniture Store",
+        "description": "",
+        "x": 11932,
+        "y": 6941,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1668",
+        "name": "Gas Station",
+        "description": "Fossoil, 4 pumps.",
+        "x": 12069,
+        "y": 7140,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1669",
+        "name": "Gated House by the Lake",
+        "description": "Gated luxurious house by the lake and river, near Westpoint.",
+        "x": 10155,
+        "y": 6624,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1670",
+        "name": "General Store",
+        "description": "This is more of a general store than a hardware store.",
+        "x": 11831,
+        "y": 6912,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1671",
+        "name": "GigaMart",
+        "description": "",
+        "x": 12024,
+        "y": 6853,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1672",
+        "name": "Stendo's Firearms Emporium",
+        "description": "Rest in peace.",
+        "x": 12090,
+        "y": 6783,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1673",
+        "name": "Hair O Genesis",
+        "description": "",
+        "x": 11852,
+        "y": 6878,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1674",
+        "name": "Hardware Store",
+        "description": "",
+        "x": 11974,
+        "y": 6912,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1675",
+        "name": "House by the lake",
+        "description": "",
+        "x": 10182,
+        "y": 6763,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1676",
+        "name": "Knox Bank",
+        "description": "",
+        "x": 11913,
+        "y": 6914,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1677",
+        "name": "Large Warehouse",
+        "description": "",
+        "x": 12140,
+        "y": 7084,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1678",
+        "name": "Laundromat",
+        "description": "",
+        "x": 11931,
+        "y": 6786,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1679",
+        "name": "Mini Hotel",
+        "description": "",
+        "x": 12018,
+        "y": 6917,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1680",
+        "name": "Motel",
+        "description": "",
+        "x": 11860,
+        "y": 6906,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1681",
+        "name": "Office Building",
+        "description": "",
+        "x": 11976,
+        "y": 6939,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1682",
+        "name": "Office Building",
+        "description": "",
+        "x": 11977,
+        "y": 6882,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1683",
+        "name": "Pharmacy",
+        "description": "Pharmahug.",
+        "x": 11935,
+        "y": 6802,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1684",
+        "name": "Picnic Area",
+        "description": "Consumption of brought food and drinks strictly forbidden!",
+        "x": 12033,
+        "y": 7364,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1685",
+        "name": "Pizza Whirled",
+        "description": "",
+        "x": 11660,
+        "y": 7083,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1686",
+        "name": "Playground",
+        "description": "",
+        "x": 11418,
+        "y": 6782,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1687",
+        "name": "Police Station",
+        "description": "",
+        "x": 11898,
+        "y": 6940,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1688",
+        "name": "Police station",
+        "description": "",
+        "x": 8063,
+        "y": 11735,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1689",
+        "name": "Post Office",
+        "description": "",
+        "x": 11956,
+        "y": 6912,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1690",
+        "name": "R.B. Mat, Dentist",
+        "description": "",
+        "x": 11880,
+        "y": 6879,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1691",
+        "name": "Restaurant",
+        "description": "",
+        "x": 11932,
+        "y": 6914,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1692",
+        "name": "School",
+        "description": "",
+        "x": 11345,
+        "y": 6784,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1693",
+        "name": "Seahorse Coffee",
+        "description": "",
+        "x": 11962,
+        "y": 6879,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1694",
+        "name": "Small Store",
+        "description": "",
+        "x": 11349,
+        "y": 6719,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1695",
+        "name": "Spiffo's",
+        "description": "",
+        "x": 11976,
+        "y": 6810,
+        "location": "West Point",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1696",
+        "name": "Storage Units",
+        "description": "",
+        "x": 12137,
+        "y": 7024,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1697",
+        "name": "The Drake and Crystal Pie Place",
+        "description": "",
+        "x": 11899,
+        "y": 6851,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1698",
+        "name": "Thunder Gas",
+        "description": "",
+        "x": 11820,
+        "y": 6865,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1699",
+        "name": "Town Hall",
+        "description": "",
+        "x": 11941,
+        "y": 6873,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1700",
+        "name": "Town Park",
+        "description": "A nice small, suburban park.",
+        "x": 11786,
+        "y": 6913,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1701",
+        "name": "Twiggy's",
+        "description": "",
+        "x": 12059,
+        "y": 6793,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1702",
+        "name": "Valu In$urance",
+        "description": "\"Sorry, zombie apocalypses aren't covered under the Act of God clause in your policy.\"",
+        "x": 13664,
+        "y": 5669,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1703",
+        "name": "Zippee Market",
+        "description": "",
+        "x": 11660,
+        "y": 7067,
+        "location": "West Point",
+        "tags": []
+    },
+    {
+        "ID": "1704",
+        "x": 3573,
+        "y": 10913,
+        "name": "Gas Station",
+        "description": "Gas-2-Go, 2 pumps.",
+        "location": "Echo Creek",
+        "tags": []
+    },
+    {
+        "ID": "1705",
+        "x": 3565,
+        "y": 10900,
+        "name": "Diner",
+        "description": "",
+        "location": "Echo Creek",
+        "tags": []
+    },
+    {
+        "ID": "1706",
+        "x": 1923,
+        "y": 10852,
+        "name": "AMZ Steel",
+        "description": "Steel factory.",
+        "location": "Echo Creek",
+        "tags": []
+    },
+    {
+        "ID": "1707",
+        "x": 3678,
+        "y": 10895,
+        "name": "Auto repair shop",
+        "description": "",
+        "location": "Echo Creek",
+        "tags": []
+    },
+    {
+        "ID": "1708",
+        "x": 2591,
+        "y": 10908,
+        "name": "Guns Unlimited",
+        "description": "",
+        "location": "Echo Creek",
+        "tags": []
+    },
+    {
+        "ID": "1709",
+        "x": 912,
+        "y": 13042,
+        "name": "Irvington Speedway",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1710",
+        "x": 3828,
+        "y": 12278,
+        "name": "Unusual Farm",
+        "description": "",
+        "location": "Echo Creek",
+        "tags": []
+    },
+    {
+        "ID": "1711",
+        "x": 3789,
+        "y": 14440,
+        "name": "Cattle Farm",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1712",
+        "x": 3765,
+        "y": 14667,
+        "name": "Pig Farm",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1713",
+        "x": 2527,
+        "y": 14540,
+        "name": "Motel",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1714",
+        "x": 2526,
+        "y": 14469,
+        "name": "Gas Station",
+        "description": "Fossoil, 2 pumps.",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1715",
+        "x": 2544,
+        "y": 14470,
+        "name": "Liquor Store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1716",
+        "x": 2460,
+        "y": 14470,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1717",
+        "x": 2469,
+        "y": 14469,
+        "name": "Grocery Store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1718",
+        "x": 2476,
+        "y": 14470,
+        "name": "Pharmacy",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1719",
+        "x": 2484,
+        "y": 14469,
+        "name": "Diner",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1720",
+        "x": 2444,
+        "y": 14535,
+        "name": "Post Office",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1721",
+        "x": 2373,
+        "y": 14477,
+        "name": "Metal Workshop",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1722",
+        "x": 2319,
+        "y": 14480,
+        "name": "Gas Station",
+        "description": "Gas-2-Go, 4 pumps.",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1723",
+        "x": 2302,
+        "y": 14480,
+        "name": "VHS store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1724",
+        "x": 2228,
+        "y": 14462,
+        "name": "Supermarket",
+        "description": "Zippee mart.",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1725",
+        "x": 2149,
+        "y": 14534,
+        "name": "Hardware Store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1726",
+        "x": 2032,
+        "y": 14651,
+        "name": "Spiffo's",
+        "description": "",
+        "location": "Irvington",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1727",
+        "x": 1865,
+        "y": 14858,
+        "name": "Sports store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1728",
+        "x": 1829,
+        "y": 14858,
+        "name": "Wedding Store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1729",
+        "x": 1765,
+        "y": 14877,
+        "name": "Pile-o-Crepe",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1730",
+        "x": 1847,
+        "y": 14778,
+        "name": "Supermarket",
+        "description": "Gigamart",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1731",
+        "x": 1817,
+        "y": 14780,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1732",
+        "x": 1774,
+        "y": 14785,
+        "name": "Gun Store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1733",
+        "x": 1763,
+        "y": 14785,
+        "name": "Comic Store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1734",
+        "x": 1748,
+        "y": 14787,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1735",
+        "x": 1861,
+        "y": 14471,
+        "name": "Public Pool",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1736",
+        "x": 2258,
+        "y": 14355,
+        "name": "School",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1737",
+        "x": 2468,
+        "y": 14320,
+        "name": "Farming supply store",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1738",
+        "x": 2432,
+        "y": 14225,
+        "name": "Church",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1739",
+        "x": 2455,
+        "y": 13909,
+        "name": "Storage Units",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1740",
+        "x": 2414,
+        "y": 13861,
+        "name": "Gas Station",
+        "description": "2 pumps.",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1741",
+        "x": 3779,
+        "y": 13483,
+        "name": "Warehouses",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1742",
+        "x": 1856,
+        "y": 14164,
+        "name": "Gun Club",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1743",
+        "x": 548,
+        "y": 9894,
+        "name": "Broken Train",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1744",
+        "x": 510,
+        "y": 9858,
+        "name": "Liquor Store",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1745",
+        "x": 444,
+        "y": 9928,
+        "name": "Church",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1746",
+        "x": 620,
+        "y": 9840,
+        "name": "Metal Workshop",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1747",
+        "x": 648,
+        "y": 9923,
+        "name": "Gas Station",
+        "description": "Fossoil, 4 pumps.",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1748",
+        "x": 689,
+        "y": 9857,
+        "name": "Post Office",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1749",
+        "x": 790,
+        "y": 9835,
+        "name": "Community Center",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1750",
+        "x": 763,
+        "y": 9770,
+        "name": "Fire Department",
+        "description": "",
+        "location": "Ekron",
+        "tags": ["Fire", "Fire axe", "Fire station"]
+    },
+    {
+        "ID": "1751",
+        "x": 431,
+        "y": 9794,
+        "name": "Medical Center",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1752",
+        "x": 440,
+        "y": 9793,
+        "name": "Electronics Store",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1753",
+        "x": 451,
+        "y": 9794,
+        "name": "Book Store",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1754",
+        "x": 463,
+        "y": 9790,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1755",
+        "x": 440,
+        "y": 9820,
+        "name": "Clothing Store",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1756",
+        "x": 441,
+        "y": 9843,
+        "name": "Bar",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1757",
+        "x": 436,
+        "y": 9864,
+        "name": "Hunting Store",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1758",
+        "x": 424,
+        "y": 9864,
+        "name": "Grocery Store",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1759",
+        "x": 404,
+        "y": 9863,
+        "name": "Pharmacy",
+        "description": "",
+        "location": "Ekron",
+        "tags": []
+    },
+    {
+        "ID": "1760",
+        "x": 2203,
+        "y": 6676,
+        "name": "Destroyed Train Yard",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1761",
+        "x": 2068,
+        "y": 6435,
+        "name": "Gas Station",
+        "description": "Fossoil, 1 pump.",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1762",
+        "x": 2130,
+        "y": 6429,
+        "name": "Destroyed Pile-O-Crepe",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1763",
+        "x": 2001,
+        "y": 6517,
+        "name": "Storage Units",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1764",
+        "x": 1937,
+        "y": 6586,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1765",
+        "x": 1919,
+        "y": 6439,
+        "name": "Jay's Chicken",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1766",
+        "x": 1946,
+        "y": 6409,
+        "name": "Auto Repair Shop",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1767",
+        "x": 1948,
+        "y": 6391,
+        "name": "Auto Supply Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1768",
+        "x": 1947,
+        "y": 6381,
+        "name": "Clothing Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1769",
+        "x": 1948,
+        "y": 6370,
+        "name": "Sewing Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1770",
+        "x": 1947,
+        "y": 6360,
+        "name": "Tool Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1771",
+        "x": 1925,
+        "y": 6345,
+        "name": "Gardening Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1772",
+        "x": 1892,
+        "y": 6341,
+        "name": "Spiffo's",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1773",
+        "x": 1865,
+        "y": 6349,
+        "name": "Gigamart",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1774",
+        "x": 1845,
+        "y": 6400,
+        "name": "Liquor Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1775",
+        "x": 1843,
+        "y": 6390,
+        "name": "Burger Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1776",
+        "x": 1839,
+        "y": 6411,
+        "name": "Lamp Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1777",
+        "x": 1995,
+        "y": 6431,
+        "name": "Spiffo's",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": ["Spiffo", "Restaurant"]
+    },
+    {
+        "ID": "1778",
+        "x": 2041,
+        "y": 6494,
+        "name": "Car Dealership",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1779",
+        "x": 2069,
+        "y": 6313,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1780",
+        "x": 2069,
+        "y": 6279,
+        "name": "Fire Department",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": ["Fire", "Fire axe", "Fire station"]
+    },
+    {
+        "ID": "1781",
+        "x": 2066,
+        "y": 6193,
+        "name": "School",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1782",
+        "x": 2083,
+        "y": 6008,
+        "name": "Church",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1783",
+        "x": 2045,
+        "y": 6004,
+        "name": "Cafe",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1784",
+        "x": 2041,
+        "y": 5976,
+        "name": "Police Station",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1785",
+        "x": 2074,
+        "y": 5886,
+        "name": "Tool Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1786",
+        "x": 2079,
+        "y": 5907,
+        "name": "Dentist",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1787",
+        "x": 2041,
+        "y": 5904,
+        "name": "Post Office",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1788",
+        "x": 2046,
+        "y": 5840,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1789",
+        "x": 2044,
+        "y": 5832,
+        "name": "Gun Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1790",
+        "x": 2048,
+        "y": 5819,
+        "name": "Bakery",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1791",
+        "x": 2086,
+        "y": 5787,
+        "name": "Clothing Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1792",
+        "x": 2095,
+        "y": 5787,
+        "name": "Restaurant",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1793",
+        "x": 2123,
+        "y": 5787,
+        "name": "Book Store",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1794",
+        "x": 2021,
+        "y": 5839,
+        "name": "Garage",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1795",
+        "x": 1848,
+        "y": 5943,
+        "name": "Community Center",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1796",
+        "x": 1438,
+        "y": 5834,
+        "name": "Court House",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1797",
+        "x": 1431,
+        "y": 5880,
+        "name": "Prison",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1798",
+        "x": 951,
+        "y": 6124,
+        "name": "Brandenburg Airport",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1799",
+        "x": 1253,
+        "y": 7380,
+        "name": "Mansion",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1800",
+        "x": 2055,
+        "y": 5710,
+        "name": "P.S. Delilah",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1801",
+        "x": 1929,
+        "y": 5764,
+        "name": "Metal Workshop",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1802",
+        "x": 2427,
+        "y": 5798,
+        "name": "Bar",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1803",
+        "x": 4065,
+        "y": 6522,
+        "name": "Sunderland Hills Sanatorium",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1804",
+        "x": 10088,
+        "y": 8244,
+        "name": "Lake House",
+        "description": "",
+        "location": "Muldraugh",
+        "tags": []
+    },
+    {
+        "ID": "1040",
+        "x": 9925,
+        "y": 12624,
+        "name": "Bunker",
+        "description": "",
+        "location": "March Ridge",
+        "tags": []
+    },
+    {
+        "ID": "1805",
+        "x": 1729,
+        "y": 5758,
+        "name": "Medical Center",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1806",
+        "x": 1692,
+        "y": 5748,
+        "name": "Diner",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1807",
+        "x": 1669,
+        "y": 5765,
+        "name": "Gas Station",
+        "description": "Gas Corner, 2 pumps.",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1808",
+        "x": 1556,
+        "y": 5746,
+        "name": "Church",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1809",
+        "x": 5578,
+        "y": 9373,
+        "name": "Bunker",
+        "description": "",
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1810",
+        "x": 8535,
+        "y": 14401,
+        "name": "Vacation Resort",
+        "description": "",
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1811",
+        "x": 8014,
+        "y": 15262,
+        "name": "Water Treatment Plant",
+        "description": "",
+        "location": "Doe Valley",
+        "tags": []
+    },
+    {
+        "ID": "1812",
+        "x": 3053,
+        "y": 14445,
+        "name": "Food Factory",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1813",
+        "x": 3112,
+        "y": 14466,
+        "name": "Warehouse",
+        "description": "",
+        "location": "Irvington",
+        "tags": []
+    },
+    {
+        "ID": "1814",
+        "x": 1951,
+        "y": 6144,
+        "name": "Tornado Shelter",
+        "description": "",
+        "location": "Brandenburg",
+        "tags": []
+    },
+    {
+        "ID": "1815",
+        "x": 4012,
+        "y": 10794,
+        "name": "Ovo Farms",
+        "description": "Chicken farm with a warehouse, factory, and manor",
+        "location": "Echo creek",
+        "tags": ["farm", "warehouse", "factory", "manor", "chicken"]
+    },
+    {
+        "ID": "1816",
+        "x": 4127,
+        "y": 9418,
+        "name": "Meadshire Estate",
+        "description": "Gated community with a single entrance",
+        "location": "Doe Valley",
+        "tags": ["residential", "gated", "community", "estate"]
+    },
+    {
+        "ID": "1817",
+        "x": 4349,
+        "y": 9743,
+        "name": "Mad Dan's Den",
+        "description": "Home appliances and furniture store",
+        "location": "Doe Valley",
+        "tags": ["store", "furniture", "appliances"]
+    },
+    {
+        "ID": "1818",
+        "x": 3529,
+        "y": 8262,
+        "name": "Historic Coalfield",
+        "description": "Western themed town with blacksmith, saloon, hardware store, and more",
+        "location": "Doe Valley",
+        "tags": ["western", "blacksmith", "saloon", "hardware", "town"]
+    },
+    {
+        "ID": "1819",
+        "x": 2917,
+        "y": 9111,
+        "name": "Boarding School",
+        "description": "Fenced off location with bunkrooms, classrooms, a cafeteria, offices, a clinic, greenhouse/botanical garden, and a courtyard",
+        "location": "Doe Valley",
+        "tags": ["school", "fenced", "bunkrooms", "classrooms", "cafeteria", "offices", "clinic", "greenhouse", "courtyard"]
+    },
+    {
+        "ID": "1820",
+        "x": 2060,
+        "y": 8574,
+        "name": "Private Retreat",
+        "description": "Fenced off lakehouse with a barn. Isolated and enclosed. Great base location",
+        "location": "Doe Valley",
+        "tags": ["retreat", "fenced", "lakehouse", "barn", "isolated", "base"]
+    },
+    {
+        "ID": "1821",
+        "x": 3466,
+        "y": 11510,
+        "name": "Gardening Store",
+        "description": "Sells seeds and gardening supplies",
+        "location": "Echo creek",
+        "tags": ["store", "gardening", "seeds", "supplies"]
+    },
+    {
+        "ID": "1822",
+        "x": 2634,
+        "y": 9475,
+        "name": "Cabin in the Woods",
+        "description": "Has a stove, sink, an outhouse, and a shed",
+        "location": "Doe Valley",
+        "tags": ["cabin", "woods", "stove", "sink", "outhouse", "shed"]
+    }
+]

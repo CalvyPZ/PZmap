@@ -3,8 +3,8 @@ import * as util from "./util.js";
 import * as i18n from "./i18n.js";
 
 var LEGEND_TEMPLATE = {
-    foraging: '<div class="legend" style="background-color:{color}"></div><span id="{id}"></span>',
-    objects: '<div class="legend" style="border-color:{color}; border-width: 3px;"></div><span id="{id}"></span>'
+    foraging: '<div class="legend-entry"><div class="legend" style="background-color:{color}"></div><span id="{id}"></span></div>',
+    objects: '<div class="legend-entry"><div class="legend" style="border-color:{color}; border-width: 3px;"></div><span id="{id}"></span></div>'
 };
 
 function genLegendsUI(type, mapping) {

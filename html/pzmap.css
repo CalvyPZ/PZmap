@@ -1,0 +1,847 @@
+/* ===================== General ===================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    min-height: 100vh;
+}
+
+* { 
+    box-sizing: border-box; 
+}
+
+.page-row {
+    display: flex;
+    flex-flow: row nowrap;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ===================== Sidebar ===================== */
+#sidebar-container {
+    display: flex;
+    flex: 0 0 auto;
+    width: 13em;
+    margin-left: 0;
+    transition: margin-left 0.3s ease;
+}
+
+#sidebar-container.collapsed {
+    margin-left: -13em;
+}
+
+#sidebar {
+    position: relative;
+    width: 13em;
+    overflow: visible;
+    background-color: #2e2e2e;
+    border-right: 1px solid #444;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+    transform: translateX(0);
+}
+
+#sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+#sidebarToggle {
+    position: absolute;
+    font-size: 24px;
+    top: 2em;
+    left: 0;
+    z-index: 9999;
+    padding: 8px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sidebarToggle:hover {
+    background: #444;
+}
+
+.sidebar-header {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 1px solid #444;
+}
+
+#top_view_link {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#top_view_link a {
+    font-size: 1em;
+    color: lightgray;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+#top_view_link a:hover {
+    color: white;
+}
+
+#sidebar-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    height: auto;
+    padding: 10px 15px;
+}
+
+#sidebar-controls select,
+#sidebar-controls .modern-slider {
+    width: 80%;
+    max-width: 300px;
+}
+
+#sidebar-controls select {
+    width: 90%;
+    background-color: #3a3a3a;
+    color: white;
+    border: 1px solid #505050;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#sidebar-controls select:hover {
+    background-color: #505050;
+}
+
+#sidebar-controls button {
+    width: 90%;
+    padding: 0.4em;
+    font-size: 1em;
+    color: white;
+    background-color: #3e3d3d;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin: 5px 0;
+}
+
+#sidebar-controls button:hover {
+    background-color: #505050;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+#sidebar-controls button.active {
+    background-color: #1a78d5;
+    color: white;
+    box-shadow: 0 4px 8px rgba(26, 120, 213, 0.15);
+}
+
+.slider-label {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    font-size: calc(100% - 2px);
+    max-width: 95%;
+}
+
+.modern-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90%;
+    height: 10px;
+    background: #3a3a3a;
+    border-radius: 5px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.modern-slider:hover {
+    background: #505050;
+}
+
+.modern-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #1e90ff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modern-slider::-webkit-slider-thumb:hover {
+    background: #0073e6;
+    transform: scale(1.1);
+}
+
+.modern-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #0073e6;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.modern-slider::-moz-range-thumb:hover {
+    background: #0073e6;
+    transform: scale(1.1);
+}
+
+.sidebar-list {
+    list-style: none;
+    padding: 0 15px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-list li {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.sidebar-list li button {
+    width: 90%;
+    padding: 0.4em;
+    font-size: 1.1em;
+    color: white;
+    background-color: #3e3d3d;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar-list li button:hover {
+    background-color: #3a3a3a;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-list li button.active {
+    background-color: #1a78d5;
+    color: white;
+    box-shadow: 0 4px 8px rgba(26, 120, 213, 0.15);
+}
+
+.sidebar-list li button:active {
+    transform: scale(0.97);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+    margin: 20px 15px;
+    border-bottom: 1px solid #444;
+}
+
+.legend {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 4px 0 0;
+    border: 1px solid #000;
+}
+
+.legend-entry {
+    display: block;
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+/* ===================== Map Container & Main Content ===================== */
+.map-container {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    position: relative;
+}
+
+#map_div {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===================== Footer ===================== */
+#footer_text {
+    margin: 10px 20px 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: lightgray;
+}
+
+#footer_text a {
+    color: lightgray;
+    text-decoration: none;
+    text-decoration: underline;
+}
+
+#mouse-coordinates {
+    text-align: center;
+    font-size: 14px;
+    color: lightgray;
+    padding: 8px 0;
+    border-radius: 4px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    user-select: none;
+}
+
+#mouse-coordinates:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+/* ===================== Original Styling for Map Elements ===================== */
+.text-right { float: right; }
+table, th, td { border: none; border-collapse: collapse; }
+button { border-radius: 4px; border-color: DarkGray; }
+button.active { background-color: LightSkyBlue; border-color: DeepSkyBlue; }
+button.warning { background-color: LightCoral; border-color: DarkRed; }
+div { border: none; }
+div.inline { display: inline-block; }
+div.coords { border: dashed 1px; }
+div.iso-only-btn { display: inline-block; }
+div.passthrough { pointer-events: none; }
+div.interactive { pointer-events: auto; }
+div.mark { border-style: solid; }
+div.text { 
+    white-space: nowrap; 
+    text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff, 
+                 1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
+    color: #33f; 
+    font-family: Arial, sans-serif; 
+}
+div.text.light { 
+    white-space: nowrap; 
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 
+                 1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000; 
+}
+div.text.above { color: #383; }
+div.text.below { color: #93f; }
+div.text.selected { color: #881; }
+div.area { 
+    transform-origin: top left; 
+    background-color: rgba(255,255,255,0.3); 
+    border-color: #39f; 
+}
+div.area.rect.iso { 
+    border-width: 8px; 
+    transform: matrix(0.5, 0.25, -0.5, 0.25, 0, 0); 
+}
+div.area.rect.top { padding-top: 0px; }
+div.area.rect.diff-sum.iso { transform: none; }
+div.area.rect.diff-sum.top { transform: matrix(0.5, -0.5, 0.5, 0.5, 0, 0); }
+div.area.text { padding-top: 0px;}
+div.area.above { background-color: rgba(255,255,255,0); border-color: #9f3; }
+div.area.below { background-color: rgba(255,255,255,0); border-color: #99f; }
+div.area.selected { background-color: rgba(255,255,50,0.3); border-color: #ff3; }
+div.area.selected-rect { background-color: rgba(255,255,192,0.3); border-color: #ffc; }
+div.area.iso.cursor { background-color: rgba(255,255,255,0); border-color: #0f0; border-width: 2px; }
+div.area.top.cursor { background-color: rgba(255,255,255,0); border-color: #0f0; border-width: 1px; }
+div.point { 
+    border-radius: 50%; 
+    border-width: 2px; 
+    width: 10px; 
+    height: 10px;
+    background-color: #39f; 
+    border-color: #33f; 
+}
+div.point.text { padding-top: 5px; }
+div.point.above { background-color: #9f3; border-color: #383; }
+div.point.below { background-color: #99f; border-color: #93f; }
+div.point.selected { background-color: #ff3; border-color: #881; }
+div.text.coords { padding-top: 16px; text-align: center; }
+div.selected { visibility: visible; pointer-events: auto; }
+div.fly { position: absolute; z-index: 100; right: 0;}
+svg { transform-origin: top left; border: none; }
+svg.mark { border: none; }
+svg.iso { transform: matrix(0.5, 0.25, -0.5, 0.25, 0, 0); }
+svg text { 
+    text-anchor: middle; 
+    dominant-baseline: hanging; 
+    paint-order: stroke; 
+    font-family: Arial, sans-serif; 
+}
+svg circle { fill: #39f; stroke: #33f; }
+
+/* ===================== UI Containers ===================== */
+#sidebar-overlays {
+    margin: 20px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#legends {
+    margin: 10px 0;
+}
+
+.legend-container {
+    margin: 8px 0;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.legend-separator {
+    height: 1px;
+    background-color: #444;
+    margin: 10px 0;
+}
+
+#marker_ui {
+    background-color: LightSkyBlue;
+    margin: 10px 15px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+#about_ui {
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    border-radius: 4px;
+    padding: 15px;
+    margin: 10px;
+}
+
+/* ===================== Responsive Design ===================== */
+@media (max-width: 768px) {
+    #sidebar-container {
+        width: 12em;
+    }
+    
+    #sidebar {
+        width: 12em;
+    }
+    
+    #sidebar-container.collapsed {
+        margin-left: -12em;
+    }
+    
+    .sidebar-list li button {
+        font-size: 1em;
+        padding: 0.3em;
+    }
+}
+
+/* ===================== Main Output ===================== */
+#main_output {
+    display: inline-block;
+    margin: 10px 15px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+/* ===================== Search Container ===================== */
+@media (max-width: 768px) {
+    #search-container {
+        display: none !important;
+    }
+}
+
+#search-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 400px;
+    z-index: 2000;
+    background-color: #2f2f2f;
+    border-radius: 6px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-family: sans-serif;
+}
+
+.search-box-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#search-input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    border-right: none;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    font-size: 14px;
+    outline: none;
+    border-radius: 4px 0 0 4px;
+}
+
+#clear-search-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    color: #aaa;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+#clear-search-btn:hover {
+    color: #fff;
+}
+
+#search-results {
+    background-color: #3a3a3a;
+    border-radius: 4px;
+    margin-top: 4px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+.search-result {
+    padding: 8px 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #2f2f2f;
+}
+
+.search-result:last-child {
+    border-bottom: none;
+}
+
+.search-result:hover {
+    background-color: #505050;
+    color: #fff;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ===================== Search Markers ===================== */
+/* Search markers (purple) */
+.search-point {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    border: 3px solid purple !important;
+    background-color: rgba(128, 0, 128, 0.5) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    box-shadow: 0 3px 8px rgba(128, 0, 128, 0.4) !important;
+}
+
+/* SVG circle search markers */
+.search-point circle {
+    r: 12 !important;
+    stroke-width: 3px !important;
+    stroke: purple !important;
+    fill: rgba(128, 0, 128, 0.5) !important;
+}
+
+/* Street search markers (orange) */
+.search-street {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    border: 3px solid orange !important;
+    background-color: rgba(255, 165, 0, 0.5) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    box-shadow: 0 3px 8px rgba(255, 165, 0, 0.4) !important;
+}
+
+/* SVG circle street search markers */
+.search-street circle {
+    r: 12 !important;
+    stroke-width: 3px !important;
+    stroke: orange !important;
+    fill: rgba(255, 165, 0, 0.5) !important;
+}
+
+/* Object search markers (green) */
+.search-object {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    border: 3px solid green !important;
+    background-color: rgba(0, 255, 0, 0.5) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    box-shadow: 0 3px 8px rgba(0, 255, 0, 0.4) !important;
+}
+
+/* SVG circle object search markers */
+.search-object circle {
+    r: 12 !important;
+    stroke-width: 3px !important;
+    stroke: green !important;
+    fill: rgba(0, 255, 0, 0.5) !important;
+}
+
+/* Room search markers (blue) */
+.search-room {
+    width: 24px !important;
+    height: 24px !important;
+    border-radius: 50% !important;
+    border: 3px solid blue !important;
+    background-color: rgba(0, 128, 255, 0.5) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    box-shadow: 0 3px 8px rgba(0, 128, 255, 0.4) !important;
+}
+
+/* SVG circle room search markers */
+.search-room circle {
+    r: 12 !important;
+    stroke-width: 3px !important;
+    stroke: blue !important;
+    fill: rgba(0, 128, 255, 0.5) !important;
+}
+
+/* Tile search markers (cyan) */
+.search-tile {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    border: 2px solid cyan !important;
+    background-color: rgba(0, 255, 255, 0.4) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    box-shadow: 0 2px 6px rgba(0, 255, 255, 0.3) !important;
+}
+
+/* SVG circle tile search markers */
+.search-tile circle {
+    r: 10 !important;
+    stroke-width: 2px !important;
+    stroke: cyan !important;
+    fill: rgba(0, 255, 255, 0.4) !important;
+}
+
+/* ===================== URL Coordinate Marker ===================== */
+/* URL coordinate markers (red with special styling) */
+.url-marker {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+    border: 3px solid red !important;
+    background-color: rgba(255, 0, 0, 0.4) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.6), 0 0 24px rgba(255, 0, 0, 0.3) !important;
+    animation: url-marker-pulse 2s infinite !important;
+}
+
+/* SVG circle URL markers */
+.url-marker circle {
+    r: 10 !important;
+    stroke-width: 3px !important;
+    stroke: red !important;
+    fill: rgba(255, 0, 0, 0.4) !important;
+    filter: drop-shadow(0 0 6px rgba(255, 0, 0, 0.6)) !important;
+}
+
+/* Pulsing animation for URL markers */
+@keyframes url-marker-pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.6), 0 0 24px rgba(255, 0, 0, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 16px rgba(255, 0, 0, 0.8), 0 0 32px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.6), 0 0 24px rgba(255, 0, 0, 0.3);
+    }
+}
+
+/* ===================== Locked Coordinate Marker ===================== */
+/* Locked coordinate markers (green with glow effect) */
+.locked-marker {
+    width: 18px !important;
+    height: 18px !important;
+    border-radius: 50% !important;
+    border: 3px solid lime !important;
+    background-color: rgba(0, 255, 0, 0.4) !important;
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.4) !important;
+    animation: locked-marker-glow 1.5s infinite alternate !important;
+}
+
+/* SVG circle locked markers */
+.locked-marker circle {
+    r: 9 !important;
+    stroke-width: 3px !important;
+    stroke: lime !important;
+    fill: rgba(0, 255, 0, 0.4) !important;
+    filter: drop-shadow(0 0 5px rgba(0, 255, 0, 0.7)) !important;
+}
+
+/* Glowing animation for locked markers */
+@keyframes locked-marker-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 0, 0.7), 0 0 20px rgba(0, 255, 0, 0.4);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.9), 0 0 30px rgba(0, 255, 0, 0.6);
+    }
+}
+
+/* ===================== Help Popup ===================== */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+    backdrop-filter: blur(3px);
+}
+
+.help-popup {
+    background-color: #2e2e2e;
+    border: 1px solid #444;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    max-height: 80vh;
+    width: 90%;
+    overflow-y: auto;
+    animation: popup-fade-in 0.3s ease-out;
+}
+
+.help-popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px 15px;
+    border-bottom: 1px solid #444;
+    background-color: #3a3a3a;
+    border-radius: 8px 8px 0 0;
+}
+
+.help-popup-header h2 {
+    margin: 0;
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.help-close-btn {
+    background: none;
+    border: none;
+    color: #aaa;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    transition: color 0.3s ease;
+}
+
+.help-close-btn:hover {
+    color: white;
+}
+
+.help-popup-content {
+    padding: 25px;
+    color: white;
+    line-height: 1.6;
+}
+
+.help-popup-content h3 {
+    color: #1e90ff;
+    margin: 20px 0 10px 0;
+    font-size: 1.2em;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+}
+
+.help-popup-content h3:first-child {
+    margin-top: 0;
+}
+
+.help-popup-content p {
+    margin: 8px 0;
+    color: #cccccc;
+}
+
+.help-popup-content strong {
+    color: #1e90ff;
+}
+
+@keyframes popup-fade-in {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Responsive help popup */
+@media (max-width: 768px) {
+    .help-popup {
+        width: 95%;
+        max-height: 85vh;
+        margin: 10px;
+    }
+    
+    .help-popup-header {
+        padding: 15px 20px 10px;
+    }
+    
+    .help-popup-header h2 {
+        font-size: 1.2em;
+    }
+    
+    .help-popup-content {
+        padding: 20px;
+    }
+    
+    .help-popup-content h3 {
+        font-size: 1.1em;
+    }
+}
