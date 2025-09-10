@@ -587,6 +587,11 @@ export function displaySearchResults(results, g) {
                 content += `<div><em>${poi.desc}</em></div>`;
             }
             
+            // For POIs only, show location underneath description in lighter font and italicized
+            if (type === 'poi' && poi.location && poi.location.trim()) {
+                content += `<div style="color: #999; font-style: italic; font-size: 12px; margin-top: 4px;">${poi.location}</div>`;
+            }
+            
             div.innerHTML = content;
             
             div.addEventListener('click', () => {
