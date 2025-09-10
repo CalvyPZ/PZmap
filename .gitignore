@@ -3,3 +3,4 @@ __pycache__/
 output/
 test_output/
 /html/sprite_lookup.json
+/scripts/marks/sprite_lookup.json
