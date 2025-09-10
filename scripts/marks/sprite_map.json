@@ -1,0 +1,75 @@
+{
+  "Old Stove": {
+    "textures": [
+      "appliances_cooking_01_16",
+      "appliances_cooking_01_17"
+    ]
+  },
+  "Antique Stove": {
+    "textures": [
+      "appliances_cooking_01_16",
+      "appliances_cooking_01_17"
+    ]
+  },
+  "Popsicle Fridge": {
+    "textures": [
+      "appliances_refrigeration_01_20",
+      "appliances_refrigeration_01_21",
+      "appliances_refrigeration_01_38",
+      "appliances_refrigeration_01_39"
+    ]
+  },
+  "Chest Freezer": {
+    "textures": [
+      "appliances_refrigeration_01_49",
+      "appliances_refrigeration_01_48",
+      "appliances_refrigeration_01_51",
+      "appliances_refrigeration_01_50"
+    ]
+  },
+  "Rain Collector Barrel": {
+    "textures": [
+      "carpentry_02_52",
+      "carpentry_02_53",
+      "carpentry_02_54",
+      "carpentry_02_55",
+      "carpentry_02_120",
+      "carpentry_02_121",
+      "carpentry_02_122",
+      "carpentry_02_123",
+      "carpentry_02_124",
+      "carpentry_02_125",
+      "carpentry_02_126",
+      "carpentry_02_127"
+    ]
+  },
+  "Water Dispenser": {
+    "textures": [
+      "location_business_office_generic_01_48",
+      "location_business_office_generic_01_49",
+      "location_business_office_generic_01_56",
+      "location_business_office_generic_01_57"
+    ]
+  },
+  "Well": {
+    "textures": [
+      "camping_01_16",
+      "camping_01_67",
+      "camping_01_66",
+      "camping_01_65",
+      "camping_01_64"
+    ]
+  },
+  "Gun Locker": {
+    "textures": [
+      "furniture_storage_02_8",
+      "furniture_storage_02_9",
+      "furniture_storage_02_10",
+      "furniture_storage_02_11",
+      "location_military_generic_01_23",
+      "location_military_generic_01_22",
+      "location_military_generic_01_31",
+      "location_military_generic_01_30"
+    ]
+  }
+}

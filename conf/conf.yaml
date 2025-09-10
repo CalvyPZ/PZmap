@@ -1,11 +1,11 @@
 pz_root: |- # project zomboid game folder
-    D:/SteamLibrary/steamapps/common/ProjectZomboid
+    C:\Program Files (x86)\Steam\steamapps\common\ProjectZomboid
 
 output_path: |- # render output folder
-    E:/pzmap
+    S:\DZImap
 
 mod_root: |- # steam workshop folder for project zomboid
-    D:/SteamLibrary/steamapps/workshop/content/108600
+    C:\Program Files (x86)\Steam\steamapps\workshop\content\108600
 
 custom_root: |- # custom file folder
     .
@@ -65,7 +65,7 @@ render_conf:
     #     a                 the key "a"
     #     <f8>              f8
     #     <cmd>+<f2>        windows key + f2
-    break_key: ''
+    break_key: '<f8>'
 
     # dzi conf
     # dzi tile size
@@ -124,7 +124,7 @@ render_conf:
     image_save_options: {}
 
     # enable cache to accelerate pyramid building, require python 3.8+
-    enable_cache: false
+    enable_cache: true
     # cache limit in MB, 0 for unlimited
     cache_limit_mb: 0
     # width for a single tile in top view
