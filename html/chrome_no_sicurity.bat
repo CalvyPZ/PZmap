@@ -1,1 +1,0 @@
-call "%~dp0chrome.bat" --disable-web-security --user-data-dir="%temp%/chromTemp" "%~dp0pzmap.html"
