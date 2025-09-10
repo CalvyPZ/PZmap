@@ -1,0 +1,240 @@
+pz_root: |- # project zomboid game folder
+    /home/pious/ProjectZomboid
+
+output_path: |- # render output folder
+    /home/pious/pzmap42_11
+
+mod_root: |- # steam workshop folder for project zomboid
+    /home/pious/ProjectZomboid
+
+custom_root: |- # custom file folder
+    /home/pious/pzmap42_11/
+
+# for multi map set
+# output_entry: map set name
+# output_route: map set data path
+output_entry: default
+output_route: map_data/
+
+# defult map or texture description fields
+# (relative from this config file location)
+map_conf_default: default.txt
+# maps and textures description files
+# (relative from this config file location)
+map_conf:
+    - vanilla.txt
+    - mod/
+
+# When use_depend_texture_only is set to true, only textures that are declared as
+# dependencies in the map's description will be used. This may cause the render
+# failure for maps with incomplete dependency descriptions.
+# The default setting is false, which means it will try to use all the textures
+# available in the description files.
+use_depend_texture_only: false
+
+# Specify maps to be rendered.
+# See vanilla.txt for map names.
+# default = Muldraugh, KY
+base_map: default
+# Additional overlay maps
+# See mod/ folder for map names.
+mod_maps:
+#    - Ashenwood
+#    - BedfordFalls
+#    - Blueberry
+#    - Chinatown
+#    - Chinatown expansion
+#    - FORTREDSTONE
+#    - Grapeseed
+#    - Greenleaf
+#    - lakeivytownship
+#    - Petroville
+#    - RavenCreek
+#    - Trelai_4x4_Steam
+
+render_conf:
+    # main conf
+    verbose: true
+    # show profiling infomation
+    profile: false
+    # thread count
+    worker_count: 8
+    # set hotkey to stop render (rerun render to resume)
+    # hotkey examples:
+    #     <ctrl>+<alt>+a    ctrl + alt + a
+    #     a                 the key "a"
+    #     <f8>              f8
+    #     <cmd>+<f2>        windows key + f2
+    break_key: ''
+
+    # dzi conf
+    # dzi tile size
+    tile_size: 1024
+    # make sure map origin (cell 0,0) lies on (0, 0) of a tile
+    # for how many bottem levels
+    # 0 for not align
+    # default is 3 bottom levels
+    tile_align_levels: 3
+    # how may layer of map to render
+    # examples:
+    # render layer 0 to layer 7
+    #     layer_range: [0, 8]
+    # render layer -32 (basement) to layer 31
+    #     layer_range: [-32, 32]
+    # render all possible layers
+    #     layer_range: all
+    layer_range: all
+    # discard bottom levels to save space at the cost of zoom in resolution
+    # you can customize this setting for each job by adding variables
+    # in following format:
+    #     omit_levels[<map name>](<render job>)
+    #     omit_levels(<render job>)
+    #     omit_levels[<map name>]
+    #
+    # Here is an example:
+    #     render main map with omit_levels = 2
+    #     render other mod maps with omit_levels = 1
+    #     render zombie heatmap and top view zombie heatmap of mod map Bedford Fall with omit_levels = 1
+    #     all other render with omit_levels = 0
+    # Example config:
+    #     omit_levels[default](base): 2
+    #     omit_levels(base): 1
+    #     omit_levels[Bedford Falls](zombie): 1
+    #     omit_levels[Bedford Falls](zombie_top): 1
+    #     omit_levels: 0
+    omit_levels: 0
+
+    # output image format, affect base and all overlay map, mush support transparent
+    # supported formats: [png, webp]
+    image_fmt: webp
+    # output image format for base map layer0, can use jpg to save space
+    # supported formats: [png, webp, jpg]
+    image_fmt_base_layer0: jpg
+    # output image options for each output format
+    # more options see:
+    #     https://pillow.readthedocs.io/en/stable/handbook/image-file-formats.html#png-saving
+    #
+    # Here is an example:
+    #     use compress level = 1 (fastest) for png
+    #     use 95% quality for jpg
+    # Example config:
+    #     image_save_options:
+    #         png: {compress_level: 1}
+    #         jpg: {quality: 95}
+    image_save_options: {}
+
+    # enable cache to accelerate pyramid building, require python 3.8+
+    enable_cache: true
+    # cache limit in MB, 0 for unlimited
+    cache_limit_mb: 0
+    # width for a single tile in top view
+    top_view_square_size: 1
+
+    # base render
+    plants_conf:
+        # eable snow on trees and bushes
+        snow: false
+        # use large bushes
+        large_bush: false
+        # eable flower on trees and bushes
+        flower: false
+        # supported season: spring, summer, summer2, autumn, winter
+        season: summer2
+        # normal tree size, range from 0 to 3 (inclusive)
+        tree_size: 2
+        # large tree size, range from 0 to 5 (inclusive)
+        jumbo_tree_size: 4
+        # large tree type, from: 0 to 10  (inclusive)
+        # see _TREE_DEF in pzmap2dzi/plants.py for more detail
+        jumbo_tree_type: 0
+        # disable ground cover grass
+        no_ground_cover: false
+        # use only one type of tree
+        # supported values:
+        # -1        trees not unified
+        # 0 to 10   the unified tree type
+        unify_tree_type: -1
+
+    # square color method in top view mode
+    # supported method:
+    # base: only use the color of the floor tile
+    # base+water: only use the color of the floor tile and water tile (if exist)
+    # avg: caculate an average color of all tiles
+    # carto-zed: Carto-Zed like color theme
+    top_view_color_mode: avg
+    
+    # font settings
+    default_font: arial.ttf
+    default_font_size: 20
+    # room font settings, using default font if omitted
+    # room_font: arial.ttf
+    # room_font_size: 20
+
+    # zombie heatmap
+    zombie_count: true
+    # zombie count font settings, using default font if omitted
+    # zombie_count_font: arial.ttf
+    zombie_count_font_size: 40
+
+    # objects areas
+    # objects font settings, using default font if omitted
+    # objects_font: arial.ttf
+    # objects_font_size: 20
+
+    # foraging & objects color config
+    # Possible color value are CSS3-style color specifiers.
+    # For more details, see:
+    #     https://pillow.readthedocs.io/en/stable/reference/ImageColor.html
+    #
+    # If the value doesn't provide alpha, default alpha is set:
+    #     For foraging default alpha = 128 (50%)
+    #     For objects default alpha = 255 (100%)
+    #
+    # To skip render of a type, set color to 'skip'
+    #
+    # Example values:
+    #       red
+    #       '#FF0000'
+    #       '#FF000080'
+    #       'rgba(255, 0, 0, 128)'
+    #       'rgb(255, 0, 0)'
+    #       'hsl(0, 100%, 50%)'
+    #
+    foraging_color_default: Gray
+    foraging_color:
+        Nav:            White
+        TownZone:       Blue
+        TrailerPark:    Cyan
+        Vegitation:     Yellow
+        Forest:         Lime
+        DeepForest:     Green
+        FarmLand:       Magenta
+        Farm:           Red
+        ForagingNav:    White          # B42 Road
+        Water:          DeepSkyBlue    # B42
+        WaterNoFish:    SlateGrey      # B42
+        PHForest:       OrangeRed      # B42.4 Acidic Forest
+        PHMixForest:    Orange         # B42.4 Acidic Mixed Forest
+        PRForest:       ForestGreen    # B42.4 Primary Forest
+        FarmMixForest:  Olive          # B42.4 Farmland Forest
+        FarmForest:     Orange         # B42.4 Managed Forestry
+        BirchForest:    OliveDrab      # B42.4 Birch Forest
+        BirchMixForest: DarkOliveGreen # B42.4 Birch Mixed Forest
+        OrganicForest:  LawnGreen      # B42.4 Organic Forest
+
+    objects_color_default: White
+    objects_color:
+        # Special Zombie Spawn Area
+        ZombiesType:  Red
+        # Car Spawn Area
+        ParkingStall: Blue
+        # Zone Story
+        ZoneStory:    Yellow
+
+    # use mark for room and objects
+    use_mark: true
+
+    # streets color
+    streets_large:  White
+    streets_medium: Cyan
+    streets_small:  Teal
