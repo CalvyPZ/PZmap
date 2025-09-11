@@ -164,7 +164,7 @@ render_conf:
     top_view_color_mode: avg
     
     # font settings
-    default_font: arial.ttf
+    default_font: DejaVuSans.ttf
     default_font_size: 20
     # room font settings, using default font if omitted
     # room_font: arial.ttf

@@ -2,13 +2,25 @@
   "Old Stove": {
     "textures": [
       "appliances_cooking_01_16",
-      "appliances_cooking_01_17"
+      "appliances_cooking_01_17",
+      "appliances_cooking_01_18",
+      "appliances_cooking_01_19"
     ]
   },
   "Antique Stove": {
     "textures": [
       "appliances_cooking_01_16",
-      "appliances_cooking_01_17"
+      "appliances_cooking_01_17",
+      "appliances_cooking_01_18",
+      "appliances_cooking_01_19"
+    ]
+  },
+  "Wood Stove": {
+    "textures": [
+      "crafted_05_4",
+      "crafted_05_5",
+      "crafted_05_6",
+      "crafted_05_7"
     ]
   },
   "Popsicle Fridge": {
@@ -70,6 +82,27 @@
       "location_military_generic_01_22",
       "location_military_generic_01_31",
       "location_military_generic_01_30"
+    ]
+  },
+  "Generator": {
+    "textures": [
+      "appliances_misc_01_0",
+      "appliances_misc_01_1",
+      "appliances_misc_01_2",
+      "appliances_misc_01_3",
+      "appliances_misc_01_4",
+      "appliances_misc_01_5",
+      "appliances_misc_01_6",
+      "appliances_misc_01_7",
+      "appliances_misc_01_8",
+      "appliances_misc_01_9",
+      "appliances_misc_01_10",
+      "appliances_misc_01_11",
+      "appliances_misc_01_12",
+      "appliances_misc_01_13",
+      "appliances_misc_01_14",
+      "appliances_misc_01_15"
+
     ]
   }
 }
