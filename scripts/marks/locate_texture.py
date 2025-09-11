@@ -60,6 +60,11 @@ if __name__ == "__main__":
         type=str,
         help="JSON file containing marker definitions with textures",
     )
+    parser.add_argument(
+        "--disable-adjacency-filter",
+        action="store_true",
+        help="Disable filtering of adjacent/side-by-side coordinates",
+    )
     parser.add_argument("textures", nargs=argparse.REMAINDER)
     args = parser.parse_args()
 
@@ -123,62 +128,73 @@ if __name__ == "__main__":
             {"x": mark["x"], "y": mark["y"], "layer": mark["layer"]}
         )
 
-    # Filter out adjacent coordinates for each marker
-    def is_adjacent(coord1, coord2):
-        x_diff = abs(coord1["x"] - coord2["x"])
-        y_diff = abs(coord1["y"] - coord2["y"])
-        layer_diff = abs(coord1["layer"] - coord2["layer"])
+    # Filter out adjacent coordinates for each marker (if enabled)
+    if args.disable_adjacency_filter:
+        print("Adjacency filtering disabled - keeping all coordinates")
+        final_marks = grouped_marks
+        total_final_count = len(raw_marks)
+        for marker_name, marker_data in final_marks.items():
+            coordinates = marker_data["coordinates"]
+            print("Marker '{}': {} locations".format(marker_name, len(coordinates)))
+    else:
 
-        # Adjacent means one of:
-        # 1. Same layer, X or Y differs by 1 (horizontally/vertically adjacent)
-        # 2. Same X,Y position but layer differs by 1 (stacked vertically)
-        same_layer_adjacent = (layer_diff == 0) and (
-            (x_diff == 1 and y_diff == 0) or (x_diff == 0 and y_diff == 1)
-        )
-        stacked_adjacent = x_diff == 0 and y_diff == 0 and layer_diff == 1
+        def is_adjacent(coord1, coord2):
+            x_diff = abs(coord1["x"] - coord2["x"])
+            y_diff = abs(coord1["y"] - coord2["y"])
+            layer_diff = abs(coord1["layer"] - coord2["layer"])
 
-        return same_layer_adjacent or stacked_adjacent
-
-    filtered_marks = {}
-    total_filtered_count = 0
-    for marker_name, marker_data in grouped_marks.items():
-        coordinates = marker_data["coordinates"]
-        # Sort coordinates for consistent processing (layer, then x, then y)
-        coordinates.sort(key=lambda c: (c["layer"], c["x"], c["y"]))
-
-        filtered_coords = []
-        for coord in coordinates:
-            # Check if this coordinate is adjacent to any already kept coordinate
-            is_too_close = any(
-                is_adjacent(coord, kept_coord) for kept_coord in filtered_coords
+            # Adjacent means one of:
+            # 1. Same layer, X or Y differs by 1 (horizontally/vertically adjacent)
+            # 2. Same X,Y position but layer differs by 1 (stacked vertically)
+            same_layer_adjacent = (layer_diff == 0) and (
+                (x_diff == 1 and y_diff == 0) or (x_diff == 0 and y_diff == 1)
             )
-            if not is_too_close:
-                filtered_coords.append(coord)
+            stacked_adjacent = x_diff == 0 and y_diff == 0 and layer_diff == 1
 
-        if filtered_coords:  # Only include markers that have at least one coordinate
-            filtered_marks[marker_name] = {
-                "type": marker_data["type"],
-                "coordinates": filtered_coords,
-            }
-            total_filtered_count += len(filtered_coords)
-            print(
-                "Marker '{}': {} locations (filtered from {})".format(
-                    marker_name, len(filtered_coords), len(coordinates)
+            return same_layer_adjacent or stacked_adjacent
+
+        final_marks = {}
+        total_final_count = 0
+        for marker_name, marker_data in grouped_marks.items():
+            coordinates = marker_data["coordinates"]
+            # Sort coordinates for consistent processing (layer, then x, then y)
+            coordinates.sort(key=lambda c: (c["layer"], c["x"], c["y"]))
+
+            filtered_coords = []
+            for coord in coordinates:
+                # Check if this coordinate is adjacent to any already kept coordinate
+                is_too_close = any(
+                    is_adjacent(coord, kept_coord) for kept_coord in filtered_coords
                 )
-            )
+                if not is_too_close:
+                    filtered_coords.append(coord)
 
-    print("Total filtered marks: {}".format(total_filtered_count))
+            if (
+                filtered_coords
+            ):  # Only include markers that have at least one coordinate
+                final_marks[marker_name] = {
+                    "type": marker_data["type"],
+                    "coordinates": filtered_coords,
+                }
+                total_final_count += len(filtered_coords)
+                print(
+                    "Marker '{}': {} locations (filtered from {})".format(
+                        marker_name, len(filtered_coords), len(coordinates)
+                    )
+                )
+
+    print("Total final marks: {}".format(total_final_count))
 
     # Apply zoom limit if needed
-    if args.no_zoom_limit and total_filtered_count >= args.no_zoom_limit:
-        for marker_data in filtered_marks.values():
+    if args.no_zoom_limit and total_final_count >= args.no_zoom_limit:
+        for marker_data in final_marks.values():
             marker_data["visible_zoom_level"] = 2
 
     if args.output:
         with open(args.output, "w") as f:
-            json.dump(filtered_marks, f, indent=2)
+            json.dump(final_marks, f, indent=2)
         print(
             "{} marker type(s) with {} total location(s) saved to [{}]".format(
-                len(filtered_marks), total_filtered_count, args.output
+                len(final_marks), total_final_count, args.output
             )
         )

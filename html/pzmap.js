@@ -293,7 +293,23 @@ function init(callback=null) {
                 } else {
                     p = Promise.all([p, poiPromise]);
                 }
-                p.then(() => { resolve(e); });
+                p.then(() => { 
+                    resolve(e);
+                    // Process any pending item search after everything is loaded
+                    if (g.pendingItemSearch) {
+                        setTimeout(() => {
+                            // Only process if POIs are enabled, otherwise markers won't be visible
+                            if (g.poisui) {
+                                handleItemSearchFromURL(g.pendingItemSearch);
+                            } else {
+                                console.log('⏳ Container search ready. Enable POIs to see results.');
+                                // Keep the search for when POIs are enabled
+                                return;
+                            }
+                            g.pendingItemSearch = null;
+                        }, 100); // Small delay to ensure everything is fully ready
+                    }
+                });
             });
         });
     });
@@ -301,9 +317,11 @@ function init(callback=null) {
 
 /**
  * Checks for URL coordinates and automatically pans and zooms to that location
- * URL Format: ?XxY or ?XxYxZ
+ * URL Format: 
+ * - ?XxY or ?XxYxZ (coordinates)
+ * - ?item={container_type}~{room} (container search)
  * Where X = pixel X coordinate, Y = pixel Y coordinate, Z = zoom level (0-max, optional, defaults to 7)
- * Example: ?12800x9600x5 or ?12800x9600
+ * Example: ?12800x9600x5 or ?12800x9600 or ?item=fridge~kitchen
  */
 function checkAndPanFromURL() {
     const query = window.location.search.substring(1);
@@ -312,10 +330,17 @@ function checkAndPanFromURL() {
         return;
     }
     
+    // Check if this is an item search query - defer until after page load
+    if (query.startsWith('item=')) {
+        // Store the query for later processing after map is fully loaded
+        g.pendingItemSearch = query;
+        return;
+    }
+    
     const parts = query.split("x").map(Number);
     
     if (parts.length < 2 || isNaN(parts[0]) || isNaN(parts[1])) {
-        console.error("Invalid query string format. Expected 'XxYxZ' or 'XxY'.");
+        console.error("Invalid query string format. Expected 'XxYxZ', 'XxY', or 'item={container_type}~{room}'.");
         return;
     }
     
@@ -388,6 +413,225 @@ function checkAndPanFromURL() {
         console.log(`Panned to coordinates: ${pixelX}, ${pixelY} with zoom level: ${Z}. Enable POIs to see the coordinate marker.`);
     }
 }
+
+/**
+ * Handles item search from URL format: ?item={container_type}~{room}
+ * @param {string} query - The query string (e.g., "item=fridge~kitchen")
+ */
+async function handleItemSearchFromURL(query) {
+    // Parse the query: item={container_type}~{room}
+    const itemPart = query.substring(5); // Remove "item="
+    const parts = itemPart.split('~');
+    
+    if (parts.length !== 2) {
+        console.error("Invalid item query format. Expected 'item={container_type}~{room}'.");
+        return;
+    }
+    
+    const containerType = parts[0].toLowerCase();
+    const roomName = parts[1].toLowerCase();
+    
+    console.log(`🔍 Loading ${containerType} containers in rooms matching: ${roomName}...`);
+    
+    try {
+        // Load the container data
+        const containerData = await loadContainerData(containerType);
+        if (!containerData) {
+            console.warn(`❌ Container type '${containerType}' not found.`);
+            return;
+        }
+        
+        // Wait for room data to be available
+        await waitForRoomData();
+        
+        // Find matching rooms
+        const matchingRooms = findMatchingRooms(roomName);
+        if (matchingRooms.length === 0) {
+            console.warn(`❌ No rooms found matching: ${roomName}`);
+            return;
+        }
+        
+        // Find containers within matching rooms
+        const matchingContainers = findContainersInRooms(containerData, matchingRooms);
+        if (matchingContainers.length === 0) {
+            console.warn(`❌ No ${containerType} containers found in rooms matching: ${roomName}`);
+            return;
+        }
+        
+        console.log(`✅ Found ${matchingContainers.length} ${containerType} containers in ${matchingRooms.length} matching rooms`);
+        
+        // Add container markers (no panning - just show all like "Show All Results")
+        addContainerMarkers(matchingContainers, containerType, roomName);
+        
+    } catch (error) {
+        console.error('❌ Error processing container search:', error);
+    }
+}
+
+/**
+ * Loads container data from processed_containers folder
+ * @param {string} containerType - The container type (e.g., "fridge", "barbecue")
+ * @returns {Promise<Object|null>} Container data or null if not found
+ */
+async function loadContainerData(containerType) {
+    try {
+        const response = await fetch(`./processed_containers/${containerType}_processed_containers.json`);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        return data[containerType]; // Return the specific container type data
+    } catch (error) {
+        console.error(`Failed to load container data for ${containerType}:`, error);
+        return null;
+    }
+}
+
+/**
+ * Waits for room data to be available in the map (optimized with max retries)
+ * @returns {Promise<void>}
+ */
+async function waitForRoomData() {
+    return new Promise((resolve, reject) => {
+        let retries = 0;
+        const maxRetries = 50; // Max 5 seconds (50 * 100ms)
+        
+        const checkRoomData = () => {
+            if (g.base_map && g.base_map.marks && g.base_map.marks.rooms && g.base_map.marks.rooms.db) {
+                resolve();
+            } else if (retries >= maxRetries) {
+                console.error('Timeout waiting for room data to be available');
+                reject(new Error('Room data not available'));
+            } else {
+                retries++;
+                setTimeout(checkRoomData, 100);
+            }
+        };
+        checkRoomData();
+    });
+}
+
+/**
+ * Finds rooms that match the given room name
+ * @param {string} roomName - The room name to search for
+ * @returns {Array} Array of matching room objects
+ */
+function findMatchingRooms(roomName) {
+    if (!g.base_map || !g.base_map.marks || !g.base_map.marks.rooms) {
+        console.error('Room data not available');
+        return [];
+    }
+    
+    const roomMarks = g.base_map.marks.rooms.db.all();
+    const matchingRooms = [];
+    
+    roomMarks.forEach(room => {
+        const roomNameLower = (room.name || '').toLowerCase();
+        // Check if room name contains the search term
+        if (roomNameLower.includes(roomName)) {
+            matchingRooms.push(room);
+        }
+    });
+    
+    return matchingRooms;
+}
+
+/**
+ * Finds containers that are within the bounds of matching rooms
+ * @param {Object} containerData - Container data with coordinates array
+ * @param {Array} matchingRooms - Array of room objects
+ * @returns {Array} Array of container coordinates that match
+ */
+function findContainersInRooms(containerData, matchingRooms) {
+    if (!containerData || !containerData.coordinates) {
+        return [];
+    }
+    
+    const matchingContainers = [];
+    
+    containerData.coordinates.forEach(container => {
+        // Check if container coordinates are within any matching room
+        for (const room of matchingRooms) {
+            if (isContainerInRoom(container, room)) {
+                matchingContainers.push({
+                    ...container,
+                    roomId: room.id,
+                    roomName: room.name
+                });
+                break; // Don't add the same container multiple times
+            }
+        }
+    });
+    
+    return matchingContainers;
+}
+
+/**
+ * Checks if a container coordinate is within a room's bounds
+ * @param {Object} container - Container with x, y, layer properties
+ * @param {Object} room - Room object with either rects or x,y coordinates
+ * @returns {boolean} True if container is within room bounds
+ */
+function isContainerInRoom(container, room) {
+    // Handle room with rectangles (most common case)
+    if (room.rects && room.rects.length > 0) {
+        return room.rects.some(rect => {
+            return container.x >= rect.x && 
+                   container.x <= rect.x + rect.width &&
+                   container.y >= rect.y && 
+                   container.y <= rect.y + rect.height;
+        });
+    }
+    
+    // Handle room with direct coordinates (less common)
+    // For point rooms, we'll use a small radius for matching
+    if (room.x !== undefined && room.y !== undefined) {
+        const radius = 50; // 50 pixel radius for point rooms
+        const distance = Math.sqrt(
+            Math.pow(container.x - room.x, 2) + 
+            Math.pow(container.y - room.y, 2)
+        );
+        return distance <= radius;
+    }
+    
+    return false;
+}
+
+/**
+ * Adds markers for found containers - identical to tile search markers
+ * @param {Array} containers - Array of container coordinates
+ * @param {string} containerType - The container type name
+ * @param {string} roomName - The searched room name
+ */
+function addContainerMarkers(containers, containerType, roomName) {
+    const containerMarkers = containers.map((container, index) => ({
+        id: `container-${containerType}-${index}`,
+        name: `${containerType} in ${container.roomName || roomName}`,
+        desc: `${containerType} container at layer ${container.layer}`,
+        x: container.x,
+        y: container.y,
+        type: 'point',
+        color: 'cyan',
+        background: 'rgba(0, 255, 255, 0.4)',
+        text_position: 'none',
+        visible_zoom_level: 0, // Always show container markers at all zoom levels
+        layer: container.layer,
+        class_list: ['search-marker', 'search-tile'] // Use same classes as tile search markers
+    }));
+    
+    // Load markers into the marker system (same as tile search markers)
+    g.marker.load(containerMarkers);
+    
+    // Store references for cleanup in search markers system (same as tile search)
+    if (!g.searchMarkers) {
+        g.searchMarkers = [];
+    }
+    const markerIds = containerMarkers.map(m => m.id);
+    g.searchMarkers.push(...markerIds);
+    
+    console.log(`Added ${containerMarkers.length} container markers for ${containerType}`);
+}
+
 
 function loadPOIMarkers() {
     return fetch('./poi.json')
@@ -721,7 +965,7 @@ function togglePOIs() {
                 g.marker.remove(lockedMarker.id);
             }
         }
-        // Also clear search markers when POIs are hidden
+        // Also clear search markers when POIs are hidden (includes container markers)
         search.clearPurpleMarkers(g);
         
         // Hide search container when POIs are disabled
@@ -756,11 +1000,18 @@ function togglePOIs() {
                 setupPOIHoverTooltips();
             }, 100);
         }
-        
         // Show search container when POIs are enabled
         const searchContainer = document.getElementById('search-container');
         if (searchContainer) {
             searchContainer.classList.remove('hidden');
+        }
+        
+        // Process any pending container search when POIs are enabled
+        if (g.pendingItemSearch) {
+            setTimeout(() => {
+                handleItemSearchFromURL(g.pendingItemSearch);
+                g.pendingItemSearch = null;
+            }, 100);
         }
     }
 }

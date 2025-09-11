@@ -72,6 +72,14 @@
       "camping_01_64"
     ]
   },
+  "Complex Loom": {
+    "textures": [
+      "crafted_04_72",
+      "crafted_04_73",
+      "crafted_04_74",
+      "crafted_04_75"
+    ]
+  },
   "Gun Locker": {
     "textures": [
       "furniture_storage_02_8",
