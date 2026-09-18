@@ -52,6 +52,7 @@
           <div class="divider"></div>
           <ul class="sidebar-list">
             <li><button id="help_btn" onclick="showHelpPopup()">Map Help</button></li>
+            <li><button id="report_issue_btn" onclick="showReportIssuePopup()">Report Issues / Contact</button></li>
           </ul>
 
           <!-- Legend Section -->
@@ -100,6 +101,28 @@
       <div id="search-results" class="hidden"></div>
     </div>
     
+    <!-- Report Issue Popup -->
+    <div id="report-issue-popup-overlay" class="popup-overlay" onclick="hideReportIssuePopup()">
+      <div id="report-issue-popup" class="help-popup report-issue-popup" onclick="event.stopPropagation()">
+        <div class="help-popup-header">
+          <h2 id="report_issue_title">Report Issues / Contact</h2>
+          <button class="help-close-btn" onclick="hideReportIssuePopup()">×</button>
+        </div>
+        <div class="help-popup-content">
+          <label id="report_issue_type_label" for="report_issue_type">Issue Type</label>
+          <select id="report_issue_type" class="report-issue-select">
+            <option value="bug" id="report_issue_type_bug">Bug Report</option>
+            <option value="suggestion" id="report_issue_type_suggestion">Suggestion</option>
+            <option value="feedback" id="report_issue_type_feedback">Feedback</option>
+          </select>
+          <div class="report-issue-actions">
+            <button type="button" id="report_issue_cancel_btn" onclick="hideReportIssuePopup()">Cancel</button>
+            <button type="button" id="report_issue_continue_btn" onclick="superReportIssue()">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Help Popup -->
     <div id="help-popup-overlay" class="popup-overlay" onclick="hideHelpPopup()">
       <div id="help-popup" class="help-popup" onclick="event.stopPropagation()">

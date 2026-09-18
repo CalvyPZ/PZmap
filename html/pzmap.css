@@ -845,3 +845,48 @@ svg circle { fill: #39f; stroke: #33f; }
         font-size: 1.1em;
     }
 }
+
+/* ===================== Report Issue Popup ===================== */
+.report-issue-popup .help-popup-content label {
+    display: block;
+    margin-bottom: 8px;
+    color: #cccccc;
+}
+
+.report-issue-select {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 8px;
+    background-color: #1a1a1a;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 4px;
+}
+
+.report-issue-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.report-issue-actions button {
+    padding: 8px 16px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.report-issue-actions button:hover {
+    background-color: #4a4a4a;
+}
+
+#report_issue_continue_btn {
+    background-color: #1e90ff;
+    border-color: #1e90ff;
+}
+
+#report_issue_continue_btn:hover {
+    background-color: #1873cc;
+}

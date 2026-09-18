@@ -256,6 +256,7 @@ function init(callback=null) {
         updateClip();
         initOSD();
         i18n.update('id');
+        localizeReportIssuePopup();
         g.marker.changeMode(g.map_type);
         //g.sys_marker.changeMode(); // sys_marker does not use rtree index, always 'top' mode
 
@@ -1589,6 +1590,86 @@ function onKeyDown(event) {
     }
 }
 
+const REPORT_ISSUE_SUPPORT_EMAIL = 'support@pzmap.org';
+const REPORT_ISSUE_MAIL_KEYS = {
+    bug: ['reportIssue.subjectBug', 'reportIssue.bodyBug'],
+    suggestion: ['reportIssue.subjectSuggestion', 'reportIssue.bodySuggestion'],
+    feedback: ['reportIssue.subjectFeedback', 'reportIssue.bodyFeedback'],
+};
+
+function getReportIssueContext() {
+    return {
+        url: window.location.href,
+        view: g.map_type || 'unknown',
+        version: (g.conf && g.conf.version) ? g.conf.version : 'unknown',
+    };
+}
+
+function localizeReportIssuePopup() {
+    const ids = [
+        'report_issue_btn',
+        'report_issue_title',
+        'report_issue_type_label',
+        'report_issue_type_bug',
+        'report_issue_type_suggestion',
+        'report_issue_type_feedback',
+        'report_issue_cancel_btn',
+        'report_issue_continue_btn',
+    ];
+    for (const id of ids) {
+        const el = document.getElementById(id);
+        if (!el) {
+            continue;
+        }
+        const key = id === 'report_issue_btn' ? 'reportIssue.button'
+            : id === 'report_issue_title' ? 'reportIssue.title'
+            : id === 'report_issue_type_label' ? 'reportIssue.issueType'
+            : id === 'report_issue_type_bug' ? 'reportIssue.typeBug'
+            : id === 'report_issue_type_suggestion' ? 'reportIssue.typeSuggestion'
+            : id === 'report_issue_type_feedback' ? 'reportIssue.typeFeedback'
+            : id === 'report_issue_cancel_btn' ? 'reportIssue.cancel'
+            : 'reportIssue.continue';
+        const text = i18n.T(key);
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+            el.placeholder = text;
+        } else if (el.tagName === 'OPTION') {
+            el.textContent = text;
+        } else {
+            el.textContent = text;
+        }
+    }
+}
+
+function showReportIssuePopup() {
+    localizeReportIssuePopup();
+    const overlay = document.getElementById('report-issue-popup-overlay');
+    if (overlay) {
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function hideReportIssuePopup() {
+    const overlay = document.getElementById('report-issue-popup-overlay');
+    if (overlay) {
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+}
+
+function superReportIssue() {
+    const select = document.getElementById('report_issue_type');
+    const kind = select ? select.value : 'bug';
+    const [subjectKey, bodyKey] = REPORT_ISSUE_MAIL_KEYS[kind] || REPORT_ISSUE_MAIL_KEYS.bug;
+    const context = getReportIssueContext();
+    const subject = encodeURIComponent(i18n.T(subjectKey, context));
+    const body = encodeURIComponent(i18n.T(bodyKey, context));
+    window.location.href = 'mailto:' + REPORT_ISSUE_SUPPORT_EMAIL
+        + '?subject=' + subject
+        + '&body=' + body;
+    hideReportIssuePopup();
+}
+
 // Help popup functions
 function showHelpPopup() {
     const overlay = document.getElementById('help-popup-overlay');
@@ -1611,10 +1692,18 @@ function hideHelpPopup() {
 // Make functions globally available for onclick handlers
 window.showHelpPopup = showHelpPopup;
 window.hideHelpPopup = hideHelpPopup;
+window.showReportIssuePopup = showReportIssuePopup;
+window.hideReportIssuePopup = hideReportIssuePopup;
+window.superReportIssue = superReportIssue;
 
 // Add escape key handler for help popup
 document.addEventListener('keydown', function(event) {
     if (event.key === 'Escape') {
+        const reportOverlay = document.getElementById('report-issue-popup-overlay');
+        if (reportOverlay && reportOverlay.style.display === 'flex') {
+            hideReportIssuePopup();
+            return;
+        }
         const overlay = document.getElementById('help-popup-overlay');
         if (overlay && overlay.style.display === 'flex') {
             hideHelpPopup();
