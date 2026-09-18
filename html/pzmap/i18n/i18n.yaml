@@ -440,6 +440,84 @@ template:
     ProjectZomboid:
         en: 'Project Zomboid'
         cn: '僵尸毁灭工程'
+    reportIssue.button:
+        en: 'Report Issues / Contact'
+        cn: '报告问题 / 联系'
+    reportIssue.title:
+        en: 'Report Issues / Contact'
+        cn: '报告问题 / 联系'
+    reportIssue.issueType:
+        en: 'Issue Type'
+        cn: '问题类型'
+    reportIssue.typeBug:
+        en: 'Bug Report'
+        cn: '错误报告'
+    reportIssue.typeSuggestion:
+        en: 'Suggestion'
+        cn: '建议'
+    reportIssue.typeFeedback:
+        en: 'Feedback'
+        cn: '反馈'
+    reportIssue.continue:
+        en: 'Continue'
+        cn: '继续'
+    reportIssue.cancel:
+        en: 'Cancel'
+        cn: '取消'
+    reportIssue.subjectBug:
+        en: '[PZmap] Bug report'
+        cn: '[PZmap] 错误报告'
+    reportIssue.bodyBug:
+        en: 'Please describe the bug you encountered on PZmap.
+
+Page: {url}
+View: {view}
+UI version: {version}
+
+'
+        cn: '请描述您在 PZmap 上遇到的错误。
+
+页面: {url}
+视图: {view}
+界面版本: {version}
+
+'
+    reportIssue.subjectSuggestion:
+        en: '[PZmap] Suggestion'
+        cn: '[PZmap] 建议'
+    reportIssue.bodySuggestion:
+        en: 'Please share your suggestion for PZmap.
+
+Page: {url}
+View: {view}
+UI version: {version}
+
+'
+        cn: '请分享您对 PZmap 的建议。
+
+页面: {url}
+视图: {view}
+界面版本: {version}
+
+'
+    reportIssue.subjectFeedback:
+        en: '[PZmap] Feedback'
+        cn: '[PZmap] 反馈'
+    reportIssue.bodyFeedback:
+        en: 'Please share your feedback about PZmap.
+
+Page: {url}
+View: {view}
+UI version: {version}
+
+'
+        cn: '请分享您对 PZmap 的反馈。
+
+页面: {url}
+视图: {view}
+界面版本: {version}
+
+'
 
 mapping:
     id:
